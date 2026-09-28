@@ -1,0 +1,72 @@
+# BasicCustomPageFlow
+
+main: kit: flow: BasicCustomPageFlow:
+{
+  entity: "custom_page",
+  kind: "basic",
+  name: "BasicCustomPageFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "custom_page_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      d: {
+        zone_id: "zone01"
+      }
+
+      i: {
+        ref: "custom_page_ref01",
+        srcdatavar: "custom_page_ref01_data",
+        suffix: "_up0",
+        textfield: "created_on"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-custom_page_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "custom_page_ref01",
+        srcdatavar: "custom_page_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "custom_page01",
+        zone_id: "zone01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-custom_page_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCustomPageFlow"
+}

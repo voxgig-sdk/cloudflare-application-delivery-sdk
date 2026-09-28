@@ -1,0 +1,54 @@
+{
+  "existing": {
+    "smart_tiered_cache": {
+      "SMART_TIERED_CACHE00": {
+        "result": {},
+        "value": "s15",
+        "zone_id": "ZONE01",
+        "id": "SMART_TIERED_CACHE00"
+      },
+      "SMART_TIERED_CACHE01": {
+        "result": {},
+        "value": "s29",
+        "zone_id": "ZONE01",
+        "id": "SMART_TIERED_CACHE01"
+      },
+      "SMART_TIERED_CACHE02": {
+        "result": {},
+        "value": "s3d",
+        "zone_id": "ZONE01",
+        "id": "SMART_TIERED_CACHE02"
+      }
+    }
+  },
+  "new": {
+    "smart_tiered_cache": {
+      "smart_tiered_cache_ref01": {
+        "result": {},
+        "value": "s51"
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/cache/tiered_cache_smart_topology_enable": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/cache/tiered_cache_smart_topology_enable": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /zones/{zone_id}/cache/tiered_cache_smart_topology_enable": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/cache/tiered_cache_smart_topology_enable": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

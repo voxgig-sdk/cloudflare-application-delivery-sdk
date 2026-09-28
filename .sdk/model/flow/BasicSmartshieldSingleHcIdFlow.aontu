@@ -1,0 +1,9 @@
+# BasicSmartshieldSingleHcIdFlow
+
+main: kit: flow: BasicSmartshieldSingleHcIdFlow:
+{
+  entity: "smartshield_single_hc_id",
+  kind: "basic",
+  name: "BasicSmartshieldSingleHcIdFlow",
+  "key$": "BasicSmartshieldSingleHcIdFlow"
+}

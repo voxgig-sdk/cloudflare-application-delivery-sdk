@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "custom_assets_for_an_account": {
+      "CUSTOM_ASSETS_FOR_AN_ACCOUNT00": {
+        "account_id": "ACCOUNT01",
+        "asset_name": "ASSET_NAME01",
+        "id": "CUSTOM_ASSETS_FOR_AN_ACCOUNT00"
+      },
+      "CUSTOM_ASSETS_FOR_AN_ACCOUNT01": {
+        "account_id": "ACCOUNT01",
+        "asset_name": "ASSET_NAME01",
+        "id": "CUSTOM_ASSETS_FOR_AN_ACCOUNT01"
+      },
+      "CUSTOM_ASSETS_FOR_AN_ACCOUNT02": {
+        "account_id": "ACCOUNT01",
+        "asset_name": "ASSET_NAME01",
+        "id": "CUSTOM_ASSETS_FOR_AN_ACCOUNT02"
+      }
+    }
+  },
+  "new": {
+    "custom_assets_for_an_account": {
+      "custom_assets_for_an_account_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /accounts/{account_id}/custom_pages/assets/{asset_name}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

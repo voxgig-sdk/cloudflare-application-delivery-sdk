@@ -1,0 +1,9 @@
+# BasicTestFlow
+
+main: kit: flow: BasicTestFlow:
+{
+  entity: "test",
+  kind: "basic",
+  name: "BasicTestFlow",
+  "key$": "BasicTestFlow"
+}

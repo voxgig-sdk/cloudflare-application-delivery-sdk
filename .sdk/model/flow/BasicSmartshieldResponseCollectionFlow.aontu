@@ -1,0 +1,26 @@
+# BasicSmartshieldResponseCollectionFlow
+
+main: kit: flow: BasicSmartshieldResponseCollectionFlow:
+{
+  entity: "smartshield_response_collection",
+  kind: "basic",
+  name: "BasicSmartshieldResponseCollectionFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "smartshield_response_collection_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSmartshieldResponseCollectionFlow"
+}

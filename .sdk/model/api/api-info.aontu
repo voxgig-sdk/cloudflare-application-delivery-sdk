@@ -1,0 +1,32 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      description: "Cloudflare application delivery: cache, purge, Argo, speed optimization, origins, custom pages, managed headers, Smart Shield, and URL normalization."
+      license: {
+        name: "BSD-3-Clause"
+        url: "https://opensource.org/licenses/BSD-3-Clause"
+      }
+      security: {
+        in: "header"
+        name: "X-Auth-Email"
+        prefix: ""
+        scheme: "api_email"
+        type: "apiKey"
+      }
+      servers: [
+        {
+          description: "Client API"
+          url: "https://api.cloudflare.com/client/v4"
+        }
+      ]
+      summary: "Cloudflare application delivery: cache, purge, Argo, speed optimization, origins, custom pages, managed headers, Smart Shield, and URL normalization."
+      title: "Cloudflare Application Delivery"
+      version: "4.0.0"
+      website: "https://cloudflare.com"
+    }
+  }
+}
+

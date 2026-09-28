@@ -1,0 +1,38 @@
+# BasicCacheReserveClearFlow
+
+main: kit: flow: BasicCacheReserveClearFlow:
+{
+  entity: "cache_reserve_clear",
+  kind: "basic",
+  name: "BasicCacheReserveClearFlow",
+  step: [
+    {
+      i: {
+        ref: "cache_reserve_clear_ref01"
+      }
+
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "cache_reserve_clear_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCacheReserveClearFlow"
+}

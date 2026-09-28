@@ -1,0 +1,27 @@
+# BasicObservatoryPageTestResponseCollectionFlow
+
+main: kit: flow: BasicObservatoryPageTestResponseCollectionFlow:
+{
+  entity: "observatory_page_test_response_collection",
+  kind: "basic",
+  name: "BasicObservatoryPageTestResponseCollectionFlow",
+  step: [
+    {
+      m: {
+        url: "url01",
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "observatory_page_test_response_collection_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicObservatoryPageTestResponseCollectionFlow"
+}

@@ -1,0 +1,38 @@
+{
+  "existing": {
+    "observatory_trend": {
+      "OBSERVATORY_TREND00": {
+        "result": {},
+        "url": "URL01",
+        "zone_id": "ZONE01",
+        "id": "OBSERVATORY_TREND00"
+      },
+      "OBSERVATORY_TREND01": {
+        "result": {},
+        "url": "URL01",
+        "zone_id": "ZONE01",
+        "id": "OBSERVATORY_TREND01"
+      },
+      "OBSERVATORY_TREND02": {
+        "result": {},
+        "url": "URL01",
+        "zone_id": "ZONE01",
+        "id": "OBSERVATORY_TREND02"
+      }
+    }
+  },
+  "new": {
+    "observatory_trend": {
+      "observatory_trend_ref01": {
+        "result": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/speed_api/pages/{url}/trend": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

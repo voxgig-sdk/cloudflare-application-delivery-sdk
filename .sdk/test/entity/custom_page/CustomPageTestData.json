@@ -1,0 +1,91 @@
+{
+  "existing": {
+    "custom_page": {
+      "CUSTOM_PAGE00": {
+        "created_on": "s5a",
+        "description": "s5b",
+        "id": "CUSTOM_PAGE00",
+        "modified_on": "s5d",
+        "preview_target": "s5e",
+        "required_tokens": [],
+        "result": {},
+        "state": "s61",
+        "url": "s62",
+        "account_id": "ACCOUNT01",
+        "zone_id": "ZONE01"
+      },
+      "CUSTOM_PAGE01": {
+        "created_on": "sb4",
+        "description": "sb5",
+        "id": "CUSTOM_PAGE01",
+        "modified_on": "sb7",
+        "preview_target": "sb8",
+        "required_tokens": [],
+        "result": {},
+        "state": "sbb",
+        "url": "sbc",
+        "account_id": "ACCOUNT01",
+        "zone_id": "ZONE01"
+      },
+      "CUSTOM_PAGE02": {
+        "created_on": "s10e",
+        "description": "s10f",
+        "id": "CUSTOM_PAGE02",
+        "modified_on": "s111",
+        "preview_target": "s112",
+        "required_tokens": [],
+        "result": {},
+        "state": "s115",
+        "url": "s116",
+        "account_id": "ACCOUNT01",
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "custom_page": {
+      "custom_page_ref01": {
+        "created_on": "s168",
+        "description": "s169",
+        "modified_on": "s16b",
+        "preview_target": "s16c",
+        "required_tokens": [],
+        "result": {},
+        "state": "s16f",
+        "url": "s170"
+      }
+    }
+  },
+  "requests": {
+    "GET /accounts/{account_id}/custom_pages": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/custom_pages": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /accounts/{account_id}/custom_pages/{identifier}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/custom_pages/{identifier}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /accounts/{account_id}/custom_pages/{identifier}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/custom_pages/{identifier}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

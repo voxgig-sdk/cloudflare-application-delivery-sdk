@@ -1,0 +1,45 @@
+# BasicUrlNormalizationFlow
+
+main: kit: flow: BasicUrlNormalizationFlow:
+{
+  entity: "url_normalization",
+  kind: "basic",
+  name: "BasicUrlNormalizationFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "url_normalization_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "url_normalization_ref01",
+        srcdatavar: "url_normalization_ref01_data",
+        suffix: "_up0",
+        textfield: "scope"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-url_normalization_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicUrlNormalizationFlow"
+}

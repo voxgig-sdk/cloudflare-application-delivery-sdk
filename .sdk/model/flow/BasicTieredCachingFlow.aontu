@@ -1,0 +1,51 @@
+# BasicTieredCachingFlow
+
+main: kit: flow: BasicTieredCachingFlow:
+{
+  entity: "tiered_caching",
+  kind: "basic",
+  name: "BasicTieredCachingFlow",
+  step: [
+    {
+      i: {
+        ref: "tiered_caching_ref01",
+        srcdatavar: "tiered_caching_ref01_data",
+        suffix: "_up0",
+        textfield: "value"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tiered_caching_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "tiered_caching_ref01",
+        srcdatavar: "tiered_caching_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "tiered_caching01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-tiered_caching_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTieredCachingFlow"
+}

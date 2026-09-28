@@ -1,0 +1,77 @@
+# Entity: custom_assets_for_an_account
+
+main: kit: entity: custom_assets_for_an_account: {
+
+  alias: field: {}
+
+  name: "custom_assets_for_an_account"
+  op: {
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /accounts/{account_id}/custom_pages/assets/{asset_name}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "account_id"
+                or: "account_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "my_custom_error_page"
+                k: "param"
+                n: "asset_name"
+                or: "asset_name"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/accounts/{account_id}/custom_pages/assets/{asset_name}"
+          q: {
+            exist: [
+              "account_id"
+              "asset_name"
+            ]
+          }
+          s: [
+            {
+              lit: "accounts"
+            }
+            {
+              var: "account_id"
+            }
+            {
+              lit: "custom_pages"
+            }
+            {
+              lit: "assets"
+            }
+            {
+              var: "asset_name"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

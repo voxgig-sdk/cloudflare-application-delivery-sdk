@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "smartshield_single_hc_id": {
+      "SMARTSHIELD_SINGLE_HC_ID00": {
+        "healthcheck_id": "HEALTHCHECK01",
+        "zone_id": "ZONE01",
+        "id": "SMARTSHIELD_SINGLE_HC_ID00"
+      },
+      "SMARTSHIELD_SINGLE_HC_ID01": {
+        "healthcheck_id": "HEALTHCHECK01",
+        "zone_id": "ZONE01",
+        "id": "SMARTSHIELD_SINGLE_HC_ID01"
+      },
+      "SMARTSHIELD_SINGLE_HC_ID02": {
+        "healthcheck_id": "HEALTHCHECK01",
+        "zone_id": "ZONE01",
+        "id": "SMARTSHIELD_SINGLE_HC_ID02"
+      }
+    }
+  },
+  "new": {
+    "smartshield_single_hc_id": {
+      "smartshield_single_hc_id_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

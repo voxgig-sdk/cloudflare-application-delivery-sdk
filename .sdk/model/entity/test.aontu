@@ -1,0 +1,90 @@
+# Entity: test
+
+main: kit: entity: test: {
+
+  alias: field: {}
+
+  name: "test"
+  op: {
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /zones/{zone_id}/speed_api/pages/{url}/tests"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "example.com"
+                k: "param"
+                n: "url"
+                or: "url"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "region"
+                or: "region"
+                r: false
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/zones/{zone_id}/speed_api/pages/{url}/tests"
+          q: {
+            exist: [
+              "region"
+              "url"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "speed_api"
+            }
+            {
+              lit: "pages"
+            }
+            {
+              var: "url"
+            }
+            {
+              lit: "tests"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

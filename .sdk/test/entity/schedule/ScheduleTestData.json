@@ -1,0 +1,30 @@
+{
+  "existing": {
+    "schedule": {
+      "SCHEDULE00": {
+        "id": "SCHEDULE00",
+        "zone_id": "ZONE01"
+      },
+      "SCHEDULE01": {
+        "id": "SCHEDULE01",
+        "zone_id": "ZONE01"
+      },
+      "SCHEDULE02": {
+        "id": "SCHEDULE02",
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "schedule": {
+      "schedule_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /zones/{zone_id}/speed_api/schedule/{url}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

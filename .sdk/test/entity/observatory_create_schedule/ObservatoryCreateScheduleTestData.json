@@ -1,0 +1,35 @@
+{
+  "existing": {
+    "observatory_create_schedule": {
+      "OBSERVATORY_CREATE_SCHEDULE00": {
+        "id": "OBSERVATORY_CREATE_SCHEDULE00",
+        "result": {},
+        "zone_id": "ZONE01"
+      },
+      "OBSERVATORY_CREATE_SCHEDULE01": {
+        "id": "OBSERVATORY_CREATE_SCHEDULE01",
+        "result": {},
+        "zone_id": "ZONE01"
+      },
+      "OBSERVATORY_CREATE_SCHEDULE02": {
+        "id": "OBSERVATORY_CREATE_SCHEDULE02",
+        "result": {},
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "observatory_create_schedule": {
+      "observatory_create_schedule_ref01": {
+        "result": {}
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/speed_api/schedule/{url}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

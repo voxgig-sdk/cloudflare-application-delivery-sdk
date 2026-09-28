@@ -1,0 +1,175 @@
+# Entity: observatory_page_test_response_single
+
+main: kit: entity: observatory_page_test_response_single: {
+
+  alias: field: {}
+
+  fields: {
+    region: {
+      h: "Region"
+      n: "region"
+      r: false
+      t: "`$ANY`"
+    }
+    result: {
+      h: "Result"
+      n: "result"
+      r: false
+      t: "`$OBJECT`"
+    }
+  }
+
+  name: "observatory_page_test_response_single"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /zones/{zone_id}/speed_api/pages/{url}/tests"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "example.com"
+                k: "param"
+                n: "url"
+                or: "url"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/zones/{zone_id}/speed_api/pages/{url}/tests"
+          q: {
+            exist: [
+              "url"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "speed_api"
+            }
+            {
+              lit: "pages"
+            }
+            {
+              var: "url"
+            }
+            {
+              lit: "tests"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /zones/{zone_id}/speed_api/pages/{url}/tests/{test_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "example.com"
+                k: "param"
+                n: "page_id"
+                or: "url"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                k: "param"
+                n: "test_id"
+                or: "test_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/zones/{zone_id}/speed_api/pages/{url}/tests/{test_id}"
+          q: {
+            exist: [
+              "page_id"
+              "test_id"
+              "zone_id"
+            ]
+          }
+          r: {
+            param: {
+              url: "page_id"
+            }
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "speed_api"
+            }
+            {
+              lit: "pages"
+            }
+            {
+              var: "page_id"
+            }
+            {
+              lit: "tests"
+            }
+            {
+              var: "test_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.test")]
+  ]
+
+}

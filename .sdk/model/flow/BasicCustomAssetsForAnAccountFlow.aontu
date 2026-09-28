@@ -1,0 +1,9 @@
+# BasicCustomAssetsForAnAccountFlow
+
+main: kit: flow: BasicCustomAssetsForAnAccountFlow:
+{
+  entity: "custom_assets_for_an_account",
+  kind: "basic",
+  name: "BasicCustomAssetsForAnAccountFlow",
+  "key$": "BasicCustomAssetsForAnAccountFlow"
+}

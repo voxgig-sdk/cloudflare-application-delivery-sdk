@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SmartshieldSingleHc | Cloudflare Application Delivery</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><a class="skip" href="#content">Skip to content</a>
+<header class="site-header"><a class="site-title" href="../index.html">Cloudflare Application Delivery<span>SDK documentation</span></a><div class="site-links"><a class="repo-link" href="https://github.com/voxgig-sdk/cloudflare-application-delivery-sdk">voxgig-sdk/cloudflare-application-delivery-sdk</a></div></header>
+<div class="site-notice" role="note"></div>
+<div class="shell"><nav class="site-nav" aria-label="Documentation"><div class="search"><label for="search">Search documentation</label><input id="search" type="search" data-base="../" placeholder="Find a guide or reference"><div id="results" aria-live="polite"></div></div><details><summary>Overview</summary><a href="../index.html">Cloudflare Application Delivery</a></details>
+<details open><summary>API</summary><a href="../api/index.html">API overview</a>
+<a href="../api/argo_config_api_response_single.html">ArgoConfigApiResponseSingle</a>
+<a href="../api/cache_purge_api_response_single_id.html">CachePurgeApiResponseSingleId</a>
+<a href="../api/cache_reserve_clear.html">CacheReserveClear</a>
+<a href="../api/custom_assets_for_a_zone.html">CustomAssetsForAZone</a>
+<a href="../api/custom_assets_for_an_account.html">CustomAssetsForAnAccount</a>
+<a href="../api/custom_page.html">CustomPage</a>
+<a href="../api/custom_pages_custom_asset_result.html">CustomPagesCustomAssetResult</a>
+<a href="../api/custom_pages_custom_asset_result_list.html">CustomPagesCustomAssetResultList</a>
+<a href="../api/custom_pages_preview_token_result.html">CustomPagesPreviewTokenResult</a>
+<a href="../api/managed_transform.html">ManagedTransform</a>
+<a href="../api/observatory_availability.html">ObservatoryAvailability</a>
+<a href="../api/observatory_create_schedule.html">ObservatoryCreateSchedule</a>
+<a href="../api/observatory_page_test_response_collection.html">ObservatoryPageTestResponseCollection</a>
+<a href="../api/observatory_page_test_response_single.html">ObservatoryPageTestResponseSingle</a>
+<a href="../api/observatory_pages_response_collection.html">ObservatoryPagesResponseCollection</a>
+<a href="../api/observatory_schedule_response_single.html">ObservatoryScheduleResponseSingle</a>
+<a href="../api/observatory_trend.html">ObservatoryTrend</a>
+<a href="../api/origin_cloud_region.html">OriginCloudRegion</a>
+<a href="../api/origin_post_quantum.html">OriginPostQuantum</a>
+<a href="../api/schedule.html">Schedule</a>
+<a href="../api/smart_shield.html">SmartShield</a>
+<a href="../api/smart_tiered_cache.html">SmartTieredCache</a>
+<a href="../api/smartshield_response_collection.html">SmartshieldResponseCollection</a>
+<a aria-current="page" href="../api/smartshield_single_hc.html">SmartshieldSingleHc</a><div class="nav-sections"><a class="nav-section" href="#post-zoneszone_idsmart_shieldhealthchecks">POST /zones/{zone_id}/smart_shield/healthchecks</a>
+<a class="nav-section" href="#get-zoneszone_idsmart_shieldhealthcheckshealthcheck_id">GET /zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}</a>
+<a class="nav-section" href="#patch-zoneszone_idsmart_shieldhealthcheckshealthcheck_id">PATCH /zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}</a>
+<a class="nav-section" href="#put-zoneszone_idsmart_shieldhealthcheckshealthcheck_id">PUT /zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}</a></div>
+<a href="../api/smartshield_single_hc_id.html">SmartshieldSingleHcId</a>
+<a href="../api/test.html">Test</a>
+<a href="../api/tiered_caching.html">TieredCaching</a>
+<a href="../api/url_normalization.html">UrlNormalization</a>
+<a href="../api/zone_cache_setting.html">ZoneCacheSetting</a></details>
+<details><summary>Guides</summary><a href="../guides/authentication.html">Authentication</a>
+<a href="../guides/first-call.html">Make your first API call</a>
+<a href="../guides/errors.html">Handle errors</a>
+<a href="../guides/concepts.html">Entities, SDKs, and tools</a></details>
+<details><summary>SDKs</summary><a href="../sdks/go.html">Golang</a>
+<a href="../sdks/lua.html">Lua</a>
+<a href="../sdks/php.html">PHP</a>
+<a href="../sdks/py.html">Python</a>
+<a href="../sdks/rb.html">Ruby</a>
+<a href="../sdks/ts.html">TypeScript</a></details>
+<details><summary>Tools</summary><a href="../tools/go-cli.html">Go CLI</a>
+<a href="../tools/go-mcp.html">Go MCP server</a></details>
+<details><summary>Features</summary><a href="../features/test.html">Test transport</a></details></nav><main id="content"><div class="page-context"><span class="section-dot" aria-hidden="true"></span>API</div><h1 id="smartshieldsinglehc">SmartshieldSingleHc</h1>
+<h2 id="operations">Operations</h2>
+<p>Every route this entity exposes. Each route links to its own reference on this page.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Route</th>
+<th>SDK operation</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST</code></td>
+<td><a href="#post-zoneszone_idsmart_shieldhealthchecks"><code>/zones/{zone_id}/smart_shield/healthchecks</code></a></td>
+<td><code>create</code></td>
+<td>Create Health Check response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idsmart_shieldhealthcheckshealthcheck_id"><code>/zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}</code></a></td>
+<td><code>load</code></td>
+<td>Health Check Details response</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><a href="#patch-zoneszone_idsmart_shieldhealthcheckshealthcheck_id"><code>/zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}</code></a></td>
+<td><code>patch</code></td>
+<td>Patch Health Check response</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td><a href="#put-zoneszone_idsmart_shieldhealthcheckshealthcheck_id"><code>/zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}</code></a></td>
+<td><code>update</code></td>
+<td>Update Health Check response</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<p>One example per SDK, generated from the API model. The argument names are the parameters and fields of this entity, and the values are placeholders. The examples are not compiled or executed.</p>
+<h3 id="golang">Golang</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/go.html#set-up-the-client">Golang setup</a>, then call the operations:</p>
+<pre><code class="language-go">smartshield_single_hc, err := client.SmartshieldSingleHc(nil).Load(map[string]any{&quot;healthcheck_id&quot;: &quot;example&quot;, &quot;zone_id&quot;: &quot;example&quot;}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(smartshield_single_hc)
+created, err := client.SmartshieldSingleHc(nil).Create(map[string]any{&quot;zone_id&quot;: &quot;example&quot;, &quot;address&quot;: &quot;example&quot;, &quot;name&quot;: &quot;example&quot;}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(created)
+updated, err := client.SmartshieldSingleHc(nil).Update(map[string]any{&quot;healthcheck_id&quot;: &quot;example&quot;, &quot;zone_id&quot;: &quot;example&quot;}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(updated)
+</code></pre>
+<h3 id="lua">Lua</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/lua.html#set-up-the-client">Lua setup</a>, then call the operations:</p>
+<pre><code class="language-lua">local smartshield_single_hc, err = client:SmartshieldSingleHc():load({ healthcheck_id = &quot;example&quot;, zone_id = &quot;example&quot; })
+local created, err = client:SmartshieldSingleHc():create({ zone_id = &quot;example&quot;, address = &quot;example&quot;, name = &quot;example&quot; })
+local updated, err = client:SmartshieldSingleHc():update({ healthcheck_id = &quot;example&quot;, zone_id = &quot;example&quot; })
+</code></pre>
+<h3 id="php">PHP</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/php.html#set-up-the-client">PHP setup</a>, then call the operations:</p>
+<pre><code class="language-php">$smartshield_single_hc = $client-&gt;SmartshieldSingleHc()-&gt;load([&quot;healthcheck_id&quot; =&gt; &quot;example&quot;, &quot;zone_id&quot; =&gt; &quot;example&quot;]);
+$created = $client-&gt;SmartshieldSingleHc()-&gt;create([&quot;zone_id&quot; =&gt; &quot;example&quot;, &quot;address&quot; =&gt; &quot;example&quot;, &quot;name&quot; =&gt; &quot;example&quot;]);
+$updated = $client-&gt;SmartshieldSingleHc()-&gt;update([&quot;healthcheck_id&quot; =&gt; &quot;example&quot;, &quot;zone_id&quot; =&gt; &quot;example&quot;]);
+</code></pre>
+<h3 id="python">Python</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/py.html#set-up-the-client">Python setup</a>, then call the operations:</p>
+<pre><code class="language-py">smartshield_single_hc = client.SmartshieldSingleHc().load({&quot;healthcheck_id&quot;: &quot;example&quot;, &quot;zone_id&quot;: &quot;example&quot;})
+created = client.SmartshieldSingleHc().create({ &quot;zone_id&quot;: &quot;example&quot;, &quot;address&quot;: &quot;example&quot;, &quot;name&quot;: &quot;example&quot; })
+updated = client.SmartshieldSingleHc().update({&quot;healthcheck_id&quot;: &quot;example&quot;, &quot;zone_id&quot;: &quot;example&quot;})
+</code></pre>
+<h3 id="ruby">Ruby</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/rb.html#set-up-the-client">Ruby setup</a>, then call the operations:</p>
+<pre><code class="language-rb">smartshield_single_hc = client.SmartshieldSingleHc.load({ &quot;healthcheck_id&quot; =&gt; &quot;example&quot;, &quot;zone_id&quot; =&gt; &quot;example&quot; })
+created = client.SmartshieldSingleHc.create({ &quot;zone_id&quot; =&gt; &quot;example&quot;, &quot;address&quot; =&gt; &quot;example&quot;, &quot;name&quot; =&gt; &quot;example&quot; })
+updated = client.SmartshieldSingleHc.update({ &quot;healthcheck_id&quot; =&gt; &quot;example&quot;, &quot;zone_id&quot; =&gt; &quot;example&quot; })
+</code></pre>
+<h3 id="typescript">TypeScript</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/ts.html#set-up-the-client">TypeScript setup</a>, then call the operations:</p>
+<pre><code class="language-ts">const smartshield_single_hc = await client.SmartshieldSingleHc().load({ healthcheck_id: &quot;example&quot;, zone_id: &quot;example&quot; })
+const created = await client.SmartshieldSingleHc().create({ zone_id: &quot;example&quot;, address: &quot;example&quot;, name: &quot;example&quot; })
+const updated = await client.SmartshieldSingleHc().update({ healthcheck_id: &quot;example&quot;, zone_id: &quot;example&quot; })
+</code></pre>
+<h2 id="fields">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>address</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>The hostname or IP address of the origin server to run health checks on.</td>
+</tr>
+<tr>
+<td><code>check_regions</code></td>
+<td><code>array</code></td>
+<td>No</td>
+<td>A list of regions from which to run health checks.</td>
+</tr>
+<tr>
+<td><code>consecutive_fails</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>The number of consecutive fails required from a health check before changing the health to unhealthy.</td>
+</tr>
+<tr>
+<td><code>consecutive_successes</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>The number of consecutive successes required from a health check before changing the health to healthy.</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>A human-readable description of the health check.</td>
+</tr>
+<tr>
+<td><code>http_config</code></td>
+<td><code>object</code></td>
+<td>No</td>
+<td>Parameters specific to an HTTP or HTTPS health check.</td>
+</tr>
+<tr>
+<td><code>interval</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>The interval between each health check.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>A short name to identify the health check.</td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>No</td>
+<td>Result</td>
+</tr>
+<tr>
+<td><code>retries</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>The number of retries to attempt in case of a timeout before marking the origin as unhealthy.</td>
+</tr>
+<tr>
+<td><code>suspended</code></td>
+<td><code>boolean</code></td>
+<td>No</td>
+<td>If suspended, no health checks are sent to the origin.</td>
+</tr>
+<tr>
+<td><code>tcp_config</code></td>
+<td><code>object</code></td>
+<td>No</td>
+<td>Parameters specific to TCP health check.</td>
+</tr>
+<tr>
+<td><code>timeout</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>The timeout (in seconds) before marking the health check as failed.</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>The protocol to use for the health check.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="create">create</h2>
+<h3 id="post-zoneszone_idsmart_shieldhealthchecks" class="operation" data-method="post"><code>POST</code> /zones/{zone_id}/smart_shield/healthchecks</h3>
+<p>Operation ID: <code>smart-shield-create-health-check</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>address</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>The hostname or IP address of the origin server to run health checks on.</td>
+</tr>
+<tr>
+<td><code>check_regions</code></td>
+<td><code>array of enum: WNAM, ENAM, WEU, EEU, NSAM, SSAM, ...</code></td>
+<td>No</td>
+<td>A list of regions from which to run health checks. Null means Cloudflare will pick a default region.</td>
+</tr>
+<tr>
+<td><code>consecutive_fails</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>The number of consecutive fails required from a health check before changing the health to unhealthy.</td>
+</tr>
+<tr>
+<td><code>consecutive_successes</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>The number of consecutive successes required from a health check before changing the health to healthy.</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>A human-readable description of the health check.</td>
+</tr>
+<tr>
+<td><code>http_config</code></td>
+<td><code>object</code></td>
+<td>No</td>
+<td>Parameters specific to an HTTP or HTTPS health check.</td>
+</tr>
+<tr>
+<td><code>http_config.allow_insecure</code></td>
+<td><code>boolean</code></td>
+<td>No</td>
+<td>Do not validate the certificate when the health check uses HTTPS.</td>
+</tr>
+<tr>
+<td><code>http_config.expected_body</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>A case-insensitive sub-string to look for in the response body. If this string is not found, the origin will be marked as unhealthy.</td>
+</tr>
+<tr>
+<td><code>http_config.expected_codes</code></td>
+<td><code>array of string</code></td>
+<td>No</td>
+<td>The expected HTTP response codes (for example &quot;200&quot;) or code ranges (for example &quot;2xx&quot; for all codes starting with 2) of the health check.</td>
+</tr>
+<tr>
+<td><code>http_config.follow_redirects</code></td>
+<td><code>boolean</code></td>
+<td>No</td>
+<td>Follow redirects if the origin returns a 3xx status code.</td>
+</tr>
+<tr>
+<td><code>http_config.header</code></td>
+<td><code>object</code></td>
+<td>No</td>
+<td>The HTTP request headers to send in the health check. It is recommended you set a Host header by default. The User-Agent header cannot be overridden.</td>
+</tr>
+<tr>
+<td><code>http_config.method</code></td>
+<td><code>enum: GET, HEAD</code></td>
+<td>No</td>
+<td>The HTTP method to use for the health check.</td>
+</tr>
+<tr>
+<td><code>http_config.path</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>The endpoint path to health check against.</td>
+</tr>
+<tr>
+<td><code>http_config.port</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>Port number to connect to for the health check. Defaults to 80 if type is HTTP or 443 if type is HTTPS.</td>
+</tr>
+<tr>
+<td><code>interval</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>The interval between each health check. Shorter intervals may give quicker notifications if the origin status changes, but will increase load on the origin as we check from multiple locations.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>A short name to identify the health check. Only alphanumeric characters, hyphens and underscores are allowed.</td>
+</tr>
+<tr>
+<td><code>retries</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>The number of retries to attempt in case of a timeout before marking the origin as unhealthy. Retries are attempted immediately.</td>
+</tr>
+<tr>
+<td><code>suspended</code></td>
+<td><code>boolean</code></td>
+<td>No</td>
+<td>If suspended, no health checks are sent to the origin.</td>
+</tr>
+<tr>
+<td><code>tcp_config</code></td>
+<td><code>object</code></td>
+<td>No</td>
+<td>Parameters specific to TCP health check.</td>
+</tr>
+<tr>
+<td><code>tcp_config.method</code></td>
+<td><code>enum: connection_established</code></td>
+<td>No</td>
+<td>The TCP connection method to use for the health check.</td>
+</tr>
+<tr>
+<td><code>tcp_config.port</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>Port number to connect to for the health check. Defaults to 80.</td>
+</tr>
+<tr>
+<td><code>timeout</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>The timeout (in seconds) before marking the health check as failed.</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>The protocol to use for the health check. Currently supported protocols are 'HTTP', 'HTTPS' and 'TCP'.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses">Responses</h4>
+<h5 id="200-create-health-check-response" class="status" data-status="2xx">200: Create Health Check response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object and object</code>.</p>
+<h5 id="4xx-create-health-check-response-failure">4XX: Create Health Check response failure</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object and object and object</code>.</p>
+<h2 id="load">load</h2>
+<h3 id="get-zoneszone_idsmart_shieldhealthcheckshealthcheck_id" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}</h3>
+<p>Operation ID: <code>smart-shield-health-check-details</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-1">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>healthcheck_id</code> | <code>path</code> | <code>string</code> | Yes |  |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses-1">Responses</h4>
+<h5 id="200-health-check-details-response" class="status" data-status="2xx">200: Health Check Details response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object and object</code>.</p>
+<h5 id="4xx-health-check-details-response-failure">4XX: Health Check Details response failure</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object and object and object</code>.</p>
+<h2 id="patch">patch</h2>
+<h3 id="patch-zoneszone_idsmart_shieldhealthcheckshealthcheck_id" class="operation" data-method="patch"><code>PATCH</code> /zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}</h3>
+<p>Operation ID: <code>smart-shield-patch-health-check</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-2">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>healthcheck_id</code> | <code>path</code> | <code>string</code> | Yes |  |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-1">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>address</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>The hostname or IP address of the origin server to run health checks on.</td>
+</tr>
+<tr>
+<td><code>check_regions</code></td>
+<td><code>array of enum: WNAM, ENAM, WEU, EEU, NSAM, SSAM, ...</code></td>
+<td>No</td>
+<td>A list of regions from which to run health checks. Null means Cloudflare will pick a default region.</td>
+</tr>
+<tr>
+<td><code>consecutive_fails</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>The number of consecutive fails required from a health check before changing the health to unhealthy.</td>
+</tr>
+<tr>
+<td><code>consecutive_successes</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>The number of consecutive successes required from a health check before changing the health to healthy.</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>A human-readable description of the health check.</td>
+</tr>
+<tr>
+<td><code>http_config</code></td>
+<td><code>object</code></td>
+<td>No</td>
+<td>Parameters specific to an HTTP or HTTPS health check.</td>
+</tr>
+<tr>
+<td><code>http_config.allow_insecure</code></td>
+<td><code>boolean</code></td>
+<td>No</td>
+<td>Do not validate the certificate when the health check uses HTTPS.</td>
+</tr>
+<tr>
+<td><code>http_config.expected_body</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>A case-insensitive sub-string to look for in the response body. If this string is not found, the origin will be marked as unhealthy.</td>
+</tr>
+<tr>
+<td><code>http_config.expected_codes</code></td>
+<td><code>array of string</code></td>
+<td>No</td>
+<td>The expected HTTP response codes (for example &quot;200&quot;) or code ranges (for example &quot;2xx&quot; for all codes starting with 2) of the health check.</td>
+</tr>
+<tr>
+<td><code>http_config.follow_redirects</code></td>
+<td><code>boolean</code></td>
+<td>No</td>
+<td>Follow redirects if the origin returns a 3xx status code.</td>
+</tr>
+<tr>
+<td><code>http_config.header</code></td>
+<td><code>object</code></td>
+<td>No</td>
+<td>The HTTP request headers to send in the health check. It is recommended you set a Host header by default. The User-Agent header cannot be overridden.</td>
+</tr>
+<tr>
+<td><code>http_config.method</code></td>
+<td><code>enum: GET, HEAD</code></td>
+<td>No</td>
+<td>The HTTP method to use for the health check.</td>
+</tr>
+<tr>
+<td><code>http_config.path</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>The endpoint path to health check against.</td>
+</tr>
+<tr>
+<td><code>http_config.port</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>Port number to connect to for the health check. Defaults to 80 if type is HTTP or 443 if type is HTTPS.</td>
+</tr>
+<tr>
+<td><code>interval</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>The interval between each health check. Shorter intervals may give quicker notifications if the origin status changes, but will increase load on the origin as we check from multiple locations.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>A short name to identify the health check. Only alphanumeric characters, hyphens and underscores are allowed.</td>
+</tr>
+<tr>
+<td><code>retries</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>The number of retries to attempt in case of a timeout before marking the origin as unhealthy. Retries are attempted immediately.</td>
+</tr>
+<tr>
+<td><code>suspended</code></td>
+<td><code>boolean</code></td>
+<td>No</td>
+<td>If suspended, no health checks are sent to the origin.</td>
+</tr>
+<tr>
+<td><code>tcp_config</code></td>
+<td><code>object</code></td>
+<td>No</td>
+<td>Parameters specific to TCP health check.</td>
+</tr>
+<tr>
+<td><code>tcp_config.method</code></td>
+<td><code>enum: connection_established</code></td>
+<td>No</td>
+<td>The TCP connection method to use for the health check.</td>
+</tr>
+<tr>
+<td><code>tcp_config.port</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>Port number to connect to for the health check. Defaults to 80.</td>
+</tr>
+<tr>
+<td><code>timeout</code></td>
+<td><code>integer</code></td>
+<td>No</td>
+<td>The timeout (in seconds) before marking the health check as failed.</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>The protocol to use for the health check. Currently supported protocols are 'HTTP', 'HTTPS' and 'TCP'.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-2">Responses</h4>
+<h5 id="200-patch-health-check-response" class="status" data-status="2xx">200: Patch Health Check response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object and object</code>.</p>
+<h5 id="4xx-patch-health-check-response-failure">4XX: Patch Health Check response failure</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object and object and object</code>.</p>
+<h2 id="update">update</h2>
+<h3 id="put-zoneszone_idsmart_shieldhealthcheckshealthcheck_id" class="operation" data-method="put"><code>PUT</code> /zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}</h3>
+<p>Operation ID: <code>smart-shield-update-health-check</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-3">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>healthcheck_id</code> | <code>path</code> | <code>string</code> | Yes |  |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-2">Request body</h4>
+<p><code>application/json</code></p>
+<p>The request body is <code>object and object and object</code>.</p>
+<h4 id="responses-3">Responses</h4>
+<h5 id="200-update-health-check-response" class="status" data-status="2xx">200: Update Health Check response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object and object</code>.</p>
+<h5 id="4xx-update-health-check-response-failure">4XX: Update Health Check response failure</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object and object and object</code>.</p>
+</main></div>
+<script src="../assets/search.js" defer></script></body></html>

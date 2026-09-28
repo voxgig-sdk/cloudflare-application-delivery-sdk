@@ -1,0 +1,48 @@
+# BasicObservatoryPageTestResponseSingleFlow
+
+main: kit: flow: BasicObservatoryPageTestResponseSingleFlow:
+{
+  entity: "observatory_page_test_response_single",
+  kind: "basic",
+  name: "BasicObservatoryPageTestResponseSingleFlow",
+  step: [
+    {
+      i: {
+        ref: "observatory_page_test_response_single_ref01"
+      }
+
+      m: {
+        page_id: "page01",
+        url: "url01",
+        zone_id: "zone01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "observatory_page_test_response_single_ref01",
+        srcdatavar: "observatory_page_test_response_single_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "observatory_page_test_response_single01",
+        page_id: "page01",
+        zone_id: "zone01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-observatory_page_test_response_single_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicObservatoryPageTestResponseSingleFlow"
+}

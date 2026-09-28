@@ -1,0 +1,142 @@
+# Entity: observatory_trend
+
+main: kit: entity: observatory_trend: {
+
+  alias: field: {}
+
+  fields: {
+    result: {
+      h: "Result"
+      n: "result"
+      r: false
+      t: "`$OBJECT`"
+    }
+  }
+
+  name: "observatory_trend"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /zones/{zone_id}/speed_api/pages/{url}/trend"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "example.com"
+                k: "param"
+                n: "url"
+                or: "url"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "DESKTOP"
+                k: "query"
+                n: "device_type"
+                or: "device_type"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "2014-01-01T05:20:00.12345Z"
+                k: "query"
+                n: "end"
+                or: "end"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "performanceScore,ttfb,fcp,si,lcp,tti,tbt,cls"
+                k: "query"
+                n: "metric"
+                or: "metric"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "us-central1"
+                k: "query"
+                n: "region"
+                or: "region"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "2014-01-01T05:20:00.12345Z"
+                k: "query"
+                n: "start"
+                or: "start"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "America/Chicago"
+                k: "query"
+                n: "tz"
+                or: "tz"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/zones/{zone_id}/speed_api/pages/{url}/trend"
+          q: {
+            exist: [
+              "device_type"
+              "end"
+              "metric"
+              "region"
+              "start"
+              "tz"
+              "url"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "speed_api"
+            }
+            {
+              lit: "pages"
+            }
+            {
+              var: "url"
+            }
+            {
+              lit: "trend"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

@@ -1,0 +1,51 @@
+{
+  "existing": {
+    "custom_pages_preview_token_result": {
+      "CUSTOM_PAGES_PREVIEW_TOKEN_RESULT00": {
+        "act": "s1e",
+        "target": "s1f",
+        "url": "s20",
+        "account_id": "ACCOUNT01",
+        "zone_id": "ZONE01",
+        "id": "CUSTOM_PAGES_PREVIEW_TOKEN_RESULT00"
+      },
+      "CUSTOM_PAGES_PREVIEW_TOKEN_RESULT01": {
+        "act": "s3c",
+        "target": "s3d",
+        "url": "s3e",
+        "account_id": "ACCOUNT01",
+        "zone_id": "ZONE01",
+        "id": "CUSTOM_PAGES_PREVIEW_TOKEN_RESULT01"
+      },
+      "CUSTOM_PAGES_PREVIEW_TOKEN_RESULT02": {
+        "act": "s5a",
+        "target": "s5b",
+        "url": "s5c",
+        "account_id": "ACCOUNT01",
+        "zone_id": "ZONE01",
+        "id": "CUSTOM_PAGES_PREVIEW_TOKEN_RESULT02"
+      }
+    }
+  },
+  "new": {
+    "custom_pages_preview_token_result": {
+      "custom_pages_preview_token_result_ref01": {
+        "act": "s78",
+        "target": "s79",
+        "url": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "POST /accounts/{account_id}/custom_pages/preview_tokens": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /zones/{zone_id}/custom_pages/preview_tokens": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

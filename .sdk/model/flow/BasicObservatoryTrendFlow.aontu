@@ -1,0 +1,33 @@
+# BasicObservatoryTrendFlow
+
+main: kit: flow: BasicObservatoryTrendFlow:
+{
+  entity: "observatory_trend",
+  kind: "basic",
+  name: "BasicObservatoryTrendFlow",
+  step: [
+    {
+      i: {
+        ref: "observatory_trend_ref01",
+        srcdatavar: "observatory_trend_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "observatory_trend01",
+        zone_id: "zone01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-observatory_trend_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicObservatoryTrendFlow"
+}

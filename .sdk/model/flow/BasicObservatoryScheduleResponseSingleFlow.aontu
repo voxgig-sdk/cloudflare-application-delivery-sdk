@@ -1,0 +1,33 @@
+# BasicObservatoryScheduleResponseSingleFlow
+
+main: kit: flow: BasicObservatoryScheduleResponseSingleFlow:
+{
+  entity: "observatory_schedule_response_single",
+  kind: "basic",
+  name: "BasicObservatoryScheduleResponseSingleFlow",
+  step: [
+    {
+      i: {
+        ref: "observatory_schedule_response_single_ref01",
+        srcdatavar: "observatory_schedule_response_single_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "observatory_schedule_response_single01",
+        zone_id: "zone01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-observatory_schedule_response_single_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicObservatoryScheduleResponseSingleFlow"
+}

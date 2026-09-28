@@ -1,0 +1,77 @@
+# Entity: smartshield_single_hc_id
+
+main: kit: entity: smartshield_single_hc_id: {
+
+  alias: field: {}
+
+  name: "smartshield_single_hc_id"
+  op: {
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "healthcheck_id"
+                or: "healthcheck_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}"
+          q: {
+            exist: [
+              "healthcheck_id"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "smart_shield"
+            }
+            {
+              lit: "healthchecks"
+            }
+            {
+              var: "healthcheck_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

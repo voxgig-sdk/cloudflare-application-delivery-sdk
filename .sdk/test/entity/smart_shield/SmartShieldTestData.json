@@ -1,0 +1,68 @@
+{
+  "existing": {
+    "smart_shield": {
+      "SMART_SHIELD00": {
+        "cache_reserve": {},
+        "errors": [],
+        "messages": [],
+        "regional_tiered_cache": {},
+        "result": {},
+        "smart_routing": {},
+        "smart_tiered_cache": {},
+        "success": false,
+        "zone_id": "ZONE01",
+        "id": "SMART_SHIELD00"
+      },
+      "SMART_SHIELD01": {
+        "cache_reserve": {},
+        "errors": [],
+        "messages": [],
+        "regional_tiered_cache": {},
+        "result": {},
+        "smart_routing": {},
+        "smart_tiered_cache": {},
+        "success": false,
+        "zone_id": "ZONE01",
+        "id": "SMART_SHIELD01"
+      },
+      "SMART_SHIELD02": {
+        "cache_reserve": {},
+        "errors": [],
+        "messages": [],
+        "regional_tiered_cache": {},
+        "result": {},
+        "smart_routing": {},
+        "smart_tiered_cache": {},
+        "success": false,
+        "zone_id": "ZONE01",
+        "id": "SMART_SHIELD02"
+      }
+    }
+  },
+  "new": {
+    "smart_shield": {
+      "smart_shield_ref01": {
+        "cache_reserve": {},
+        "errors": [],
+        "messages": [],
+        "regional_tiered_cache": {},
+        "result": {},
+        "smart_routing": {},
+        "smart_tiered_cache": {},
+        "success": false
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/smart_shield": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/smart_shield": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

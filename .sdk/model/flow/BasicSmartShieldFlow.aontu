@@ -1,0 +1,44 @@
+# BasicSmartShieldFlow
+
+main: kit: flow: BasicSmartShieldFlow:
+{
+  entity: "smart_shield",
+  kind: "basic",
+  name: "BasicSmartShieldFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "smart_shield_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "smart_shield_ref01",
+        srcdatavar: "smart_shield_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-smart_shield_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSmartShieldFlow"
+}

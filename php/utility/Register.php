@@ -1,0 +1,70 @@
+<?php
+declare(strict_types=1);
+
+// CloudflareApplicationDelivery SDK utility registration
+
+require_once __DIR__ . '/../core/UtilityType.php';
+require_once __DIR__ . '/Clean.php';
+require_once __DIR__ . '/Done.php';
+require_once __DIR__ . '/MakeError.php';
+require_once __DIR__ . '/FeatureAdd.php';
+require_once __DIR__ . '/FeatureHook.php';
+require_once __DIR__ . '/FeatureInit.php';
+require_once __DIR__ . '/Fetcher.php';
+require_once __DIR__ . '/MakeFetchDef.php';
+require_once __DIR__ . '/MakeContext.php';
+require_once __DIR__ . '/MakeOptions.php';
+require_once __DIR__ . '/MakeRequest.php';
+require_once __DIR__ . '/MakeResponse.php';
+require_once __DIR__ . '/MakeResult.php';
+require_once __DIR__ . '/MakePoint.php';
+require_once __DIR__ . '/MakeSpec.php';
+require_once __DIR__ . '/MakeUrl.php';
+require_once __DIR__ . '/Param.php';
+require_once __DIR__ . '/PrepareAuth.php';
+require_once __DIR__ . '/PrepareBody.php';
+require_once __DIR__ . '/Graphql.php';
+require_once __DIR__ . '/PrepareHeaders.php';
+require_once __DIR__ . '/PrepareMethod.php';
+require_once __DIR__ . '/PrepareParams.php';
+require_once __DIR__ . '/PreparePath.php';
+require_once __DIR__ . '/PrepareQuery.php';
+require_once __DIR__ . '/ResultBasic.php';
+require_once __DIR__ . '/ResultBody.php';
+require_once __DIR__ . '/ResultHeaders.php';
+require_once __DIR__ . '/TransformRequest.php';
+require_once __DIR__ . '/TransformResponse.php';
+
+CloudflareApplicationDeliveryUtility::setRegistrar(function (CloudflareApplicationDeliveryUtility $u): void {
+    $u->clean = [CloudflareApplicationDeliveryClean::class, 'call'];
+    $u->done = [CloudflareApplicationDeliveryDone::class, 'call'];
+    $u->make_error = [CloudflareApplicationDeliveryMakeError::class, 'call'];
+    $u->feature_add = [CloudflareApplicationDeliveryFeatureAdd::class, 'call'];
+    $u->feature_hook = [CloudflareApplicationDeliveryFeatureHook::class, 'call'];
+    $u->feature_init = [CloudflareApplicationDeliveryFeatureInit::class, 'call'];
+    $u->fetcher = [CloudflareApplicationDeliveryFetcher::class, 'call'];
+    $u->make_fetch_def = [CloudflareApplicationDeliveryMakeFetchDef::class, 'call'];
+    $u->make_context = [CloudflareApplicationDeliveryMakeContext::class, 'call'];
+    $u->make_options = [CloudflareApplicationDeliveryMakeOptions::class, 'call'];
+    $u->make_request = [CloudflareApplicationDeliveryMakeRequest::class, 'call'];
+    $u->make_response = [CloudflareApplicationDeliveryMakeResponse::class, 'call'];
+    $u->make_result = [CloudflareApplicationDeliveryMakeResult::class, 'call'];
+    $u->make_point = [CloudflareApplicationDeliveryMakePoint::class, 'call'];
+    $u->make_spec = [CloudflareApplicationDeliveryMakeSpec::class, 'call'];
+    $u->make_url = [CloudflareApplicationDeliveryMakeUrl::class, 'call'];
+    $u->param = [CloudflareApplicationDeliveryParam::class, 'call'];
+    $u->prepare_auth = [CloudflareApplicationDeliveryPrepareAuth::class, 'call'];
+    $u->prepare_body = [CloudflareApplicationDeliveryPrepareBody::class, 'call'];
+    $u->prepare_headers = [CloudflareApplicationDeliveryPrepareHeaders::class, 'call'];
+    $u->prepare_method = [CloudflareApplicationDeliveryPrepareMethod::class, 'call'];
+    $u->prepare_params = [CloudflareApplicationDeliveryPrepareParams::class, 'call'];
+    $u->prepare_path = [CloudflareApplicationDeliveryPreparePath::class, 'call'];
+    $u->prepare_query = [CloudflareApplicationDeliveryPrepareQuery::class, 'call'];
+    $u->graphql_body = [CloudflareApplicationDeliveryGraphql::class, 'body'];
+    $u->graphql_errors = [CloudflareApplicationDeliveryGraphql::class, 'errors'];
+    $u->result_basic = [CloudflareApplicationDeliveryResultBasic::class, 'call'];
+    $u->result_body = [CloudflareApplicationDeliveryResultBody::class, 'call'];
+    $u->result_headers = [CloudflareApplicationDeliveryResultHeaders::class, 'call'];
+    $u->transform_request = [CloudflareApplicationDeliveryTransformRequest::class, 'call'];
+    $u->transform_response = [CloudflareApplicationDeliveryTransformResponse::class, 'call'];
+});

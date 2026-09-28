@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "origin_post_quantum": {
+      "ORIGIN_POST_QUANTUM00": {
+        "result": {},
+        "value": "s15",
+        "zone_id": "ZONE01",
+        "id": "ORIGIN_POST_QUANTUM00"
+      },
+      "ORIGIN_POST_QUANTUM01": {
+        "result": {},
+        "value": "s29",
+        "zone_id": "ZONE01",
+        "id": "ORIGIN_POST_QUANTUM01"
+      },
+      "ORIGIN_POST_QUANTUM02": {
+        "result": {},
+        "value": "s3d",
+        "zone_id": "ZONE01",
+        "id": "ORIGIN_POST_QUANTUM02"
+      }
+    }
+  },
+  "new": {
+    "origin_post_quantum": {
+      "origin_post_quantum_ref01": {
+        "result": {},
+        "value": "s51"
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/cache/origin_post_quantum_encryption": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/cache/origin_post_quantum_encryption": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

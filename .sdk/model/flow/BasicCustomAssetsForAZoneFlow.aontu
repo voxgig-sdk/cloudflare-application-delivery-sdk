@@ -1,0 +1,9 @@
+# BasicCustomAssetsForAZoneFlow
+
+main: kit: flow: BasicCustomAssetsForAZoneFlow:
+{
+  entity: "custom_assets_for_a_zone",
+  kind: "basic",
+  name: "BasicCustomAssetsForAZoneFlow",
+  "key$": "BasicCustomAssetsForAZoneFlow"
+}

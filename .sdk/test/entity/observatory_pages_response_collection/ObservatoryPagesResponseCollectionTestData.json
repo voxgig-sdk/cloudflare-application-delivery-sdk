@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "observatory_pages_response_collection": {
+      "OBSERVATORY_PAGES_RESPONSE_COLLECTION00": {
+        "result": [],
+        "zone_id": "ZONE01"
+      },
+      "OBSERVATORY_PAGES_RESPONSE_COLLECTION01": {
+        "result": [],
+        "zone_id": "ZONE01"
+      },
+      "OBSERVATORY_PAGES_RESPONSE_COLLECTION02": {
+        "result": [],
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "observatory_pages_response_collection": {
+      "observatory_pages_response_collection_ref01": {
+        "result": []
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/speed_api/pages": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

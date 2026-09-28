@@ -1,0 +1,22 @@
+# BasicCustomPagesPreviewTokenResultFlow
+
+main: kit: flow: BasicCustomPagesPreviewTokenResultFlow:
+{
+  entity: "custom_pages_preview_token_result",
+  kind: "basic",
+  name: "BasicCustomPagesPreviewTokenResultFlow",
+  step: [
+    {
+      i: {
+        ref: "custom_pages_preview_token_result_ref01"
+      }
+
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicCustomPagesPreviewTokenResultFlow"
+}

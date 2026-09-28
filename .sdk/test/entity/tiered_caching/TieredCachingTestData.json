@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "tiered_caching": {
+      "TIERED_CACHING00": {
+        "result": {},
+        "value": "s15",
+        "zone_id": "ZONE01",
+        "id": "TIERED_CACHING00"
+      },
+      "TIERED_CACHING01": {
+        "result": {},
+        "value": "s29",
+        "zone_id": "ZONE01",
+        "id": "TIERED_CACHING01"
+      },
+      "TIERED_CACHING02": {
+        "result": {},
+        "value": "s3d",
+        "zone_id": "ZONE01",
+        "id": "TIERED_CACHING02"
+      }
+    }
+  },
+  "new": {
+    "tiered_caching": {
+      "tiered_caching_ref01": {
+        "result": {},
+        "value": "s51"
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/argo/tiered_caching": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/argo/tiered_caching": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

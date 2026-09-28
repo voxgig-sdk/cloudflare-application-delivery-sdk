@@ -1,0 +1,35 @@
+{
+  "existing": {
+    "observatory_availability": {
+      "OBSERVATORY_AVAILABILITY00": {
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "OBSERVATORY_AVAILABILITY00"
+      },
+      "OBSERVATORY_AVAILABILITY01": {
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "OBSERVATORY_AVAILABILITY01"
+      },
+      "OBSERVATORY_AVAILABILITY02": {
+        "result": {},
+        "zone_id": "ZONE01",
+        "id": "OBSERVATORY_AVAILABILITY02"
+      }
+    }
+  },
+  "new": {
+    "observatory_availability": {
+      "observatory_availability_ref01": {
+        "result": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/speed_api/availabilities": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

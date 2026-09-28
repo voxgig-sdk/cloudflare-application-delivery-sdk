@@ -1,0 +1,65 @@
+{
+  "existing": {
+    "managed_transform": {
+      "MANAGED_TRANSFORM00": {
+        "errors": [],
+        "managed_request_headers": [],
+        "managed_response_headers": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "zone_id": "ZONE01",
+        "id": "MANAGED_TRANSFORM00"
+      },
+      "MANAGED_TRANSFORM01": {
+        "errors": [],
+        "managed_request_headers": [],
+        "managed_response_headers": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "zone_id": "ZONE01",
+        "id": "MANAGED_TRANSFORM01"
+      },
+      "MANAGED_TRANSFORM02": {
+        "errors": [],
+        "managed_request_headers": [],
+        "managed_response_headers": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "zone_id": "ZONE01",
+        "id": "MANAGED_TRANSFORM02"
+      }
+    }
+  },
+  "new": {
+    "managed_transform": {
+      "managed_transform_ref01": {
+        "errors": [],
+        "managed_request_headers": [],
+        "managed_response_headers": [],
+        "messages": [],
+        "result": {},
+        "success": false
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/managed_headers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /zones/{zone_id}/managed_headers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/managed_headers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

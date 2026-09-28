@@ -1,0 +1,91 @@
+{
+  "existing": {
+    "zone_cache_setting": {
+      "ZONE_CACHE_SETTING00": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": "s36",
+        "zone_id": "ZONE01",
+        "id": "ZONE_CACHE_SETTING00"
+      },
+      "ZONE_CACHE_SETTING01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": "s68",
+        "zone_id": "ZONE01",
+        "id": "ZONE_CACHE_SETTING01"
+      },
+      "ZONE_CACHE_SETTING02": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": "s9a",
+        "zone_id": "ZONE01",
+        "id": "ZONE_CACHE_SETTING02"
+      }
+    }
+  },
+  "new": {
+    "zone_cache_setting": {
+      "zone_cache_setting_ref01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": "scc"
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/cache/cache_reserve_clear": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/cache/cache_reserve_clear": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/cache/cache_reserve": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/cache/regional_tiered_cache": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/cache/variants": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /zones/{zone_id}/cache/variants": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/cache/cache_reserve": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/cache/regional_tiered_cache": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/cache/variants": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

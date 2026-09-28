@@ -1,0 +1,137 @@
+{
+  "existing": {
+    "origin_cloud_region": {
+      "ORIGIN_CLOUD_REGION00": {
+        "errors": [],
+        "id": "ORIGIN_CLOUD_REGION00",
+        "ip": "s66",
+        "messages": [],
+        "origin_ip": "s68",
+        "region": "s69",
+        "result": {},
+        "result_info": {},
+        "success": true,
+        "vendor": "s6d",
+        "zone_id": "ZONE01"
+      },
+      "ORIGIN_CLOUD_REGION01": {
+        "errors": [],
+        "id": "ORIGIN_CLOUD_REGION01",
+        "ip": "sca",
+        "messages": [],
+        "origin_ip": "scc",
+        "region": "scd",
+        "result": {},
+        "result_info": {},
+        "success": true,
+        "vendor": "sd1",
+        "zone_id": "ZONE01"
+      },
+      "ORIGIN_CLOUD_REGION02": {
+        "errors": [],
+        "id": "ORIGIN_CLOUD_REGION02",
+        "ip": "s12e",
+        "messages": [],
+        "origin_ip": "s130",
+        "region": "s131",
+        "result": {},
+        "result_info": {},
+        "success": true,
+        "vendor": "s135",
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "origin_cloud_region": {
+      "origin_cloud_region_ref01": {
+        "errors": [],
+        "ip": "s192",
+        "messages": [],
+        "origin_ip": "s194",
+        "region": "s195",
+        "result": {},
+        "result_info": {},
+        "success": true,
+        "vendor": "s199"
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/cache/origin_cloud_regions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/origin/cloud_regions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/cache/origin_cloud_regions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/cache/origin_cloud_regions/supported_regions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/origin/cloud_regions/supported_regions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/cache/origin_cloud_regions/{origin_ip}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/origin/cloud_regions/{origin_ip}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/cache/origin_cloud_regions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/cache/origin_cloud_regions/batch": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /zones/{zone_id}/cache/origin_cloud_regions/{origin_ip}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /zones/{zone_id}/origin/cloud_regions/{origin_ip}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /zones/{zone_id}/cache/origin_cloud_regions/batch": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /zones/{zone_id}/origin/cloud_regions/batch": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/origin/cloud_regions/{origin_ip}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/origin/cloud_regions/batch": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

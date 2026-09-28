@@ -1,0 +1,66 @@
+package core
+
+var UtilityRegistrar func(u *Utility)
+
+var NewBaseFeatureFunc func() Feature
+
+var NewTestFeatureFunc func() Feature
+
+var NewArgoConfigApiResponseSingleEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewCachePurgeApiResponseSingleIdEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewCacheReserveClearEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewCustomAssetsForAZoneEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewCustomAssetsForAnAccountEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewCustomPageEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewCustomPagesCustomAssetResultEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewCustomPagesCustomAssetResultListEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewCustomPagesPreviewTokenResultEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewManagedTransformEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewObservatoryAvailabilityEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewObservatoryCreateScheduleEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewObservatoryPageTestResponseCollectionEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewObservatoryPageTestResponseSingleEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewObservatoryPagesResponseCollectionEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewObservatoryScheduleResponseSingleEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewObservatoryTrendEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewOriginCloudRegionEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewOriginPostQuantumEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewScheduleEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewSmartShieldEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewSmartTieredCacheEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewSmartshieldResponseCollectionEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewSmartshieldSingleHcEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewSmartshieldSingleHcIdEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewTestEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewTieredCachingEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewUrlNormalizationEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+
+var NewZoneCacheSettingEntityFunc func(client *CloudflareApplicationDeliverySDK, entopts map[string]any) CloudflareApplicationDeliveryEntity
+

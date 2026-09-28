@@ -1,0 +1,45 @@
+# BasicArgoConfigApiResponseSingleFlow
+
+main: kit: flow: BasicArgoConfigApiResponseSingleFlow:
+{
+  entity: "argo_config_api_response_single",
+  kind: "basic",
+  name: "BasicArgoConfigApiResponseSingleFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "argo_config_api_response_single_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "argo_config_api_response_single_ref01",
+        srcdatavar: "argo_config_api_response_single_ref01_data",
+        suffix: "_up0",
+        textfield: "value"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-argo_config_api_response_single_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicArgoConfigApiResponseSingleFlow"
+}

@@ -1,0 +1,23 @@
+# BasicObservatoryCreateScheduleFlow
+
+main: kit: flow: BasicObservatoryCreateScheduleFlow:
+{
+  entity: "observatory_create_schedule",
+  kind: "basic",
+  name: "BasicObservatoryCreateScheduleFlow",
+  step: [
+    {
+      i: {
+        ref: "observatory_create_schedule_ref01"
+      }
+
+      m: {
+        url: "url01",
+        zone_id: "zone01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicObservatoryCreateScheduleFlow"
+}

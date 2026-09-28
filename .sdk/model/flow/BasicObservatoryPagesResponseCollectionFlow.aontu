@@ -1,0 +1,26 @@
+# BasicObservatoryPagesResponseCollectionFlow
+
+main: kit: flow: BasicObservatoryPagesResponseCollectionFlow:
+{
+  entity: "observatory_pages_response_collection",
+  kind: "basic",
+  name: "BasicObservatoryPagesResponseCollectionFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "observatory_pages_response_collection_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicObservatoryPagesResponseCollectionFlow"
+}

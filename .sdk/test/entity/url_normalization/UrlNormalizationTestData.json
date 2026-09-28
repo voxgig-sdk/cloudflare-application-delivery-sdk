@@ -1,0 +1,65 @@
+{
+  "existing": {
+    "url_normalization": {
+      "URL_NORMALIZATION00": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "scope": "s3f",
+        "success": true,
+        "type": "s41",
+        "zone_id": "ZONE01",
+        "id": "URL_NORMALIZATION00"
+      },
+      "URL_NORMALIZATION01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "scope": "s7b",
+        "success": true,
+        "type": "s7d",
+        "zone_id": "ZONE01",
+        "id": "URL_NORMALIZATION01"
+      },
+      "URL_NORMALIZATION02": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "scope": "sb7",
+        "success": true,
+        "type": "sb9",
+        "zone_id": "ZONE01",
+        "id": "URL_NORMALIZATION02"
+      }
+    }
+  },
+  "new": {
+    "url_normalization": {
+      "url_normalization_ref01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "scope": "sf3",
+        "success": true,
+        "type": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/url_normalization": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /zones/{zone_id}/url_normalization": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/url_normalization": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

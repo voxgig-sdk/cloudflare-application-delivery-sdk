@@ -1,0 +1,39 @@
+{
+  "existing": {
+    "observatory_page_test_response_collection": {
+      "OBSERVATORY_PAGE_TEST_RESPONSE_COLLECTION00": {
+        "result": [],
+        "result_info": {},
+        "url": "URL01",
+        "zone_id": "ZONE01"
+      },
+      "OBSERVATORY_PAGE_TEST_RESPONSE_COLLECTION01": {
+        "result": [],
+        "result_info": {},
+        "url": "URL01",
+        "zone_id": "ZONE01"
+      },
+      "OBSERVATORY_PAGE_TEST_RESPONSE_COLLECTION02": {
+        "result": [],
+        "result_info": {},
+        "url": "URL01",
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "observatory_page_test_response_collection": {
+      "observatory_page_test_response_collection_ref01": {
+        "result": [],
+        "result_info": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/speed_api/pages/{url}/tests": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

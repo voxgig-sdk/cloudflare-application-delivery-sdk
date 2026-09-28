@@ -1,0 +1,78 @@
+{
+  "existing": {
+    "custom_pages_custom_asset_result": {
+      "CUSTOM_PAGES_CUSTOM_ASSET_RESULT00": {
+        "description": "s28",
+        "name": "s29",
+        "result": {},
+        "url": "s2b",
+        "account_id": "ACCOUNT01",
+        "zone_id": "ZONE01",
+        "asset_name": "ASSET_NAME01",
+        "id": "CUSTOM_PAGES_CUSTOM_ASSET_RESULT00"
+      },
+      "CUSTOM_PAGES_CUSTOM_ASSET_RESULT01": {
+        "description": "s50",
+        "name": "s51",
+        "result": {},
+        "url": "s53",
+        "account_id": "ACCOUNT01",
+        "zone_id": "ZONE01",
+        "asset_name": "ASSET_NAME01",
+        "id": "CUSTOM_PAGES_CUSTOM_ASSET_RESULT01"
+      },
+      "CUSTOM_PAGES_CUSTOM_ASSET_RESULT02": {
+        "description": "s78",
+        "name": "s79",
+        "result": {},
+        "url": "s7b",
+        "account_id": "ACCOUNT01",
+        "zone_id": "ZONE01",
+        "asset_name": "ASSET_NAME01",
+        "id": "CUSTOM_PAGES_CUSTOM_ASSET_RESULT02"
+      }
+    }
+  },
+  "new": {
+    "custom_pages_custom_asset_result": {
+      "custom_pages_custom_asset_result_ref01": {
+        "description": "sa0",
+        "name": "sa1",
+        "result": {},
+        "url": "sa3"
+      }
+    }
+  },
+  "requests": {
+    "POST /accounts/{account_id}/custom_pages/assets": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /zones/{zone_id}/custom_pages/assets": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /accounts/{account_id}/custom_pages/assets/{asset_name}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/custom_pages/assets/{asset_name}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /accounts/{account_id}/custom_pages/assets/{asset_name}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/custom_pages/assets/{asset_name}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+# Entity: custom_assets_for_a_zone
+
+main: kit: entity: custom_assets_for_a_zone: {
+
+  alias: field: {}
+
+  name: "custom_assets_for_a_zone"
+  op: {
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /zones/{zone_id}/custom_pages/assets/{asset_name}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "my_custom_error_page"
+                k: "param"
+                n: "asset_name"
+                or: "asset_name"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "023e105f4ecef8ad9ca31a8372d0c353"
+                k: "param"
+                n: "zone_id"
+                or: "zone_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/zones/{zone_id}/custom_pages/assets/{asset_name}"
+          q: {
+            exist: [
+              "asset_name"
+              "zone_id"
+            ]
+          }
+          s: [
+            {
+              lit: "zones"
+            }
+            {
+              var: "zone_id"
+            }
+            {
+              lit: "custom_pages"
+            }
+            {
+              lit: "assets"
+            }
+            {
+              var: "asset_name"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

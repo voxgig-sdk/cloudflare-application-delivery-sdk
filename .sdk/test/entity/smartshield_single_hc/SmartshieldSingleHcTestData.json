@@ -1,0 +1,105 @@
+{
+  "existing": {
+    "smartshield_single_hc": {
+      "SMARTSHIELD_SINGLE_HC00": {
+        "address": "s8c",
+        "check_regions": [],
+        "consecutive_fails": 142,
+        "consecutive_successes": 143,
+        "description": "s90",
+        "http_config": {},
+        "interval": 146,
+        "name": "s93",
+        "result": {},
+        "retries": 149,
+        "suspended": true,
+        "tcp_config": {},
+        "timeout": 152,
+        "type": "s99",
+        "zone_id": "ZONE01",
+        "healthcheck_id": "HEALTHCHECK01",
+        "id": "SMARTSHIELD_SINGLE_HC00"
+      },
+      "SMARTSHIELD_SINGLE_HC01": {
+        "address": "s118",
+        "check_regions": [],
+        "consecutive_fails": 282,
+        "consecutive_successes": 283,
+        "description": "s11c",
+        "http_config": {},
+        "interval": 286,
+        "name": "s11f",
+        "result": {},
+        "retries": 289,
+        "suspended": true,
+        "tcp_config": {},
+        "timeout": 292,
+        "type": "s125",
+        "zone_id": "ZONE01",
+        "healthcheck_id": "HEALTHCHECK01",
+        "id": "SMARTSHIELD_SINGLE_HC01"
+      },
+      "SMARTSHIELD_SINGLE_HC02": {
+        "address": "s1a4",
+        "check_regions": [],
+        "consecutive_fails": 422,
+        "consecutive_successes": 423,
+        "description": "s1a8",
+        "http_config": {},
+        "interval": 426,
+        "name": "s1ab",
+        "result": {},
+        "retries": 429,
+        "suspended": true,
+        "tcp_config": {},
+        "timeout": 432,
+        "type": "s1b1",
+        "zone_id": "ZONE01",
+        "healthcheck_id": "HEALTHCHECK01",
+        "id": "SMARTSHIELD_SINGLE_HC02"
+      }
+    }
+  },
+  "new": {
+    "smartshield_single_hc": {
+      "smartshield_single_hc_ref01": {
+        "address": "s230",
+        "check_regions": [],
+        "consecutive_fails": 562,
+        "consecutive_successes": 563,
+        "description": "s234",
+        "http_config": {},
+        "interval": 566,
+        "name": "s237",
+        "result": {},
+        "retries": 569,
+        "suspended": true,
+        "tcp_config": {},
+        "timeout": 572,
+        "type": "s23d"
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/smart_shield/healthchecks": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

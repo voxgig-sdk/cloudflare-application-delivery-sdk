@@ -1,0 +1,53 @@
+{
+  "existing": {
+    "observatory_page_test_response_single": {
+      "OBSERVATORY_PAGE_TEST_RESPONSE_SINGLE00": {
+        "region": "s14",
+        "result": {},
+        "url": "URL01",
+        "zone_id": "ZONE01",
+        "page_id": "PAGE01",
+        "test_id": "TEST01",
+        "id": "OBSERVATORY_PAGE_TEST_RESPONSE_SINGLE00"
+      },
+      "OBSERVATORY_PAGE_TEST_RESPONSE_SINGLE01": {
+        "region": "s28",
+        "result": {},
+        "url": "URL01",
+        "zone_id": "ZONE01",
+        "page_id": "PAGE01",
+        "test_id": "TEST01",
+        "id": "OBSERVATORY_PAGE_TEST_RESPONSE_SINGLE01"
+      },
+      "OBSERVATORY_PAGE_TEST_RESPONSE_SINGLE02": {
+        "region": "s3c",
+        "result": {},
+        "url": "URL01",
+        "zone_id": "ZONE01",
+        "page_id": "PAGE01",
+        "test_id": "TEST01",
+        "id": "OBSERVATORY_PAGE_TEST_RESPONSE_SINGLE02"
+      }
+    }
+  },
+  "new": {
+    "observatory_page_test_response_single": {
+      "observatory_page_test_response_single_ref01": {
+        "region": "s50",
+        "result": {}
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/speed_api/pages/{url}/tests": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/speed_api/pages/{url}/tests/{test_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,284 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 29
+  metrics: count: path: 39
+  metrics: count: method: 79
+
+  entity: argo_config_api_response_single: {
+    path: "/zones/{zone_id}/argo/smart_routing": {
+      op: list: method: *GET
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: cache_purge_api_response_single_id: {
+    path: "/zones/{zone_id}/purge_cache": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: cache_reserve_clear: {
+    path: "/zones/{zone_id}/smart_shield/cache_reserve_clear": {
+      op: create: method: *POST
+      op: list: method: *GET
+    }
+  }
+
+  entity: custom_assets_for_a_zone: {
+    path: "/zones/{zone_id}/custom_pages/assets/{asset_name}": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: custom_assets_for_an_account: {
+    path: "/accounts/{account_id}/custom_pages/assets/{asset_name}": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: custom_page: {
+    path: "/accounts/{account_id}/custom_pages": {
+      op: list: method: *GET
+    }
+    path: "/accounts/{account_id}/custom_pages/{identifier}": {
+      rename: param: "identifier": *"id"
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+    path: "/zones/{zone_id}/custom_pages": {
+      op: list: method: *GET
+    }
+    path: "/zones/{zone_id}/custom_pages/{identifier}": {
+      rename: param: "identifier": *"id"
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+  }
+
+  entity: custom_pages_custom_asset_result: {
+    path: "/accounts/{account_id}/custom_pages/assets": {
+      op: create: method: *POST
+    }
+    path: "/accounts/{account_id}/custom_pages/assets/{asset_name}": {
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+    path: "/zones/{zone_id}/custom_pages/assets": {
+      op: create: method: *POST
+    }
+    path: "/zones/{zone_id}/custom_pages/assets/{asset_name}": {
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+  }
+
+  entity: custom_pages_custom_asset_result_list: {
+    path: "/accounts/{account_id}/custom_pages/assets": {
+      op: list: method: *GET
+    }
+    path: "/zones/{zone_id}/custom_pages/assets": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: custom_pages_preview_token_result: {
+    path: "/accounts/{account_id}/custom_pages/preview_tokens": {
+      op: create: method: *POST
+    }
+    path: "/zones/{zone_id}/custom_pages/preview_tokens": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: managed_transform: {
+    path: "/zones/{zone_id}/managed_headers": {
+      op: list: method: *GET
+      op: patch: method: *PATCH
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: observatory_availability: {
+    path: "/zones/{zone_id}/speed_api/availabilities": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: observatory_create_schedule: {
+    path: "/zones/{zone_id}/speed_api/schedule/{url}": {
+      rename: param: "url": *"id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: observatory_page_test_response_collection: {
+    path: "/zones/{zone_id}/speed_api/pages/{url}/tests": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: observatory_page_test_response_single: {
+    path: "/zones/{zone_id}/speed_api/pages/{url}/tests": {
+      op: create: method: *POST
+    }
+    path: "/zones/{zone_id}/speed_api/pages/{url}/tests/{test_id}": {
+      rename: param: "url": *"page_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: observatory_pages_response_collection: {
+    path: "/zones/{zone_id}/speed_api/pages": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: observatory_schedule_response_single: {
+    path: "/zones/{zone_id}/speed_api/schedule/{url}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: observatory_trend: {
+    path: "/zones/{zone_id}/speed_api/pages/{url}/trend": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: origin_cloud_region: {
+    path: "/zones/{zone_id}/cache/origin_cloud_regions": {
+      op: create: method: *POST
+      op: list: method: *GET
+      op: patch: method: *PATCH
+    }
+    path: "/zones/{zone_id}/cache/origin_cloud_regions/batch": {
+      action: "batch": {}
+      op: patch: method: *PATCH
+      op: remove: method: *DELETE
+    }
+    path: "/zones/{zone_id}/cache/origin_cloud_regions/supported_regions": {
+      action: "supported_region": {}
+      op: list: method: *GET
+    }
+    path: "/zones/{zone_id}/cache/origin_cloud_regions/{origin_ip}": {
+      rename: param: "origin_ip": *"id"
+      op: load: method: *GET
+      op: remove: method: *DELETE
+    }
+    path: "/zones/{zone_id}/origin/cloud_regions": {
+      op: list: method: *GET
+    }
+    path: "/zones/{zone_id}/origin/cloud_regions/batch": {
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/zones/{zone_id}/origin/cloud_regions/supported_regions": {
+      op: list: method: *GET
+    }
+    path: "/zones/{zone_id}/origin/cloud_regions/{origin_ip}": {
+      rename: param: "origin_ip": *"id"
+      op: load: method: *GET
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+  }
+
+  entity: origin_post_quantum: {
+    path: "/zones/{zone_id}/cache/origin_post_quantum_encryption": {
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+  }
+
+  entity: schedule: {
+    path: "/zones/{zone_id}/speed_api/schedule/{url}": {
+      rename: param: "url": *"id"
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: smart_shield: {
+    path: "/zones/{zone_id}/smart_shield": {
+      op: list: method: *GET
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: smart_tiered_cache: {
+    path: "/zones/{zone_id}/cache/tiered_cache_smart_topology_enable": {
+      op: create: method: *POST
+      op: load: method: *GET
+      op: patch: method: *PATCH
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: smartshield_response_collection: {
+    path: "/zones/{zone_id}/smart_shield/healthchecks": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: smartshield_single_hc: {
+    path: "/zones/{zone_id}/smart_shield/healthchecks": {
+      op: create: method: *POST
+    }
+    path: "/zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+      op: update: method: *PUT
+    }
+  }
+
+  entity: smartshield_single_hc_id: {
+    path: "/zones/{zone_id}/smart_shield/healthchecks/{healthcheck_id}": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: test: {
+    path: "/zones/{zone_id}/speed_api/pages/{url}/tests": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: tiered_caching: {
+    path: "/zones/{zone_id}/argo/tiered_caching": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: url_normalization: {
+    path: "/zones/{zone_id}/url_normalization": {
+      op: list: method: *GET
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+  }
+
+  entity: zone_cache_setting: {
+    path: "/zones/{zone_id}/cache/cache_reserve": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+    }
+    path: "/zones/{zone_id}/cache/cache_reserve_clear": {
+      op: create: method: *POST
+      op: list: method: *GET
+    }
+    path: "/zones/{zone_id}/cache/regional_tiered_cache": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+    }
+    path: "/zones/{zone_id}/cache/variants": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+      op: remove: method: *DELETE
+    }
+  }
+
+}

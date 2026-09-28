@@ -1,0 +1,1303 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>OriginCloudRegion | Cloudflare Application Delivery</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><a class="skip" href="#content">Skip to content</a>
+<header class="site-header"><a class="site-title" href="../index.html">Cloudflare Application Delivery<span>SDK documentation</span></a><div class="site-links"><a class="repo-link" href="https://github.com/voxgig-sdk/cloudflare-application-delivery-sdk">voxgig-sdk/cloudflare-application-delivery-sdk</a></div></header>
+<div class="site-notice" role="note"></div>
+<div class="shell"><nav class="site-nav" aria-label="Documentation"><div class="search"><label for="search">Search documentation</label><input id="search" type="search" data-base="../" placeholder="Find a guide or reference"><div id="results" aria-live="polite"></div></div><details><summary>Overview</summary><a href="../index.html">Cloudflare Application Delivery</a></details>
+<details open><summary>API</summary><a href="../api/index.html">API overview</a>
+<a href="../api/argo_config_api_response_single.html">ArgoConfigApiResponseSingle</a>
+<a href="../api/cache_purge_api_response_single_id.html">CachePurgeApiResponseSingleId</a>
+<a href="../api/cache_reserve_clear.html">CacheReserveClear</a>
+<a href="../api/custom_assets_for_a_zone.html">CustomAssetsForAZone</a>
+<a href="../api/custom_assets_for_an_account.html">CustomAssetsForAnAccount</a>
+<a href="../api/custom_page.html">CustomPage</a>
+<a href="../api/custom_pages_custom_asset_result.html">CustomPagesCustomAssetResult</a>
+<a href="../api/custom_pages_custom_asset_result_list.html">CustomPagesCustomAssetResultList</a>
+<a href="../api/custom_pages_preview_token_result.html">CustomPagesPreviewTokenResult</a>
+<a href="../api/managed_transform.html">ManagedTransform</a>
+<a href="../api/observatory_availability.html">ObservatoryAvailability</a>
+<a href="../api/observatory_create_schedule.html">ObservatoryCreateSchedule</a>
+<a href="../api/observatory_page_test_response_collection.html">ObservatoryPageTestResponseCollection</a>
+<a href="../api/observatory_page_test_response_single.html">ObservatoryPageTestResponseSingle</a>
+<a href="../api/observatory_pages_response_collection.html">ObservatoryPagesResponseCollection</a>
+<a href="../api/observatory_schedule_response_single.html">ObservatoryScheduleResponseSingle</a>
+<a href="../api/observatory_trend.html">ObservatoryTrend</a>
+<a aria-current="page" href="../api/origin_cloud_region.html">OriginCloudRegion</a><div class="nav-sections"><a class="nav-section" href="#post-zoneszone_idcacheorigin_cloud_regions">POST /zones/{zone_id}/cache/origin_cloud_regions</a>
+<a class="nav-section" href="#get-zoneszone_idorigincloud_regions">GET /zones/{zone_id}/origin/cloud_regions</a>
+<a class="nav-section" href="#get-zoneszone_idcacheorigin_cloud_regions">GET /zones/{zone_id}/cache/origin_cloud_regions</a>
+<a class="nav-section" href="#get-zoneszone_idcacheorigin_cloud_regionssupported_regions">GET /zones/{zone_id}/cache/origin_cloud_regions/supported_regions</a>
+<a class="nav-section" href="#get-zoneszone_idorigincloud_regionssupported_regions">GET /zones/{zone_id}/origin/cloud_regions/supported_regions</a>
+<a class="nav-section" href="#get-zoneszone_idcacheorigin_cloud_regionsorigin_ip">GET /zones/{zone_id}/cache/origin_cloud_regions/{origin_ip}</a>
+<a class="nav-section" href="#get-zoneszone_idorigincloud_regionsorigin_ip">GET /zones/{zone_id}/origin/cloud_regions/{origin_ip}</a>
+<a class="nav-section" href="#patch-zoneszone_idcacheorigin_cloud_regions">PATCH /zones/{zone_id}/cache/origin_cloud_regions</a>
+<a class="nav-section" href="#patch-zoneszone_idcacheorigin_cloud_regionsbatch">PATCH /zones/{zone_id}/cache/origin_cloud_regions/batch</a>
+<a class="nav-section" href="#delete-zoneszone_idcacheorigin_cloud_regionsorigin_ip">DELETE /zones/{zone_id}/cache/origin_cloud_regions/{origin_ip}</a>
+<a class="nav-section" href="#delete-zoneszone_idorigincloud_regionsorigin_ip">DELETE /zones/{zone_id}/origin/cloud_regions/{origin_ip}</a>
+<a class="nav-section" href="#delete-zoneszone_idcacheorigin_cloud_regionsbatch">DELETE /zones/{zone_id}/cache/origin_cloud_regions/batch</a>
+<a class="nav-section" href="#delete-zoneszone_idorigincloud_regionsbatch">DELETE /zones/{zone_id}/origin/cloud_regions/batch</a>
+<a class="nav-section" href="#put-zoneszone_idorigincloud_regionsorigin_ip">PUT /zones/{zone_id}/origin/cloud_regions/{origin_ip}</a>
+<a class="nav-section" href="#put-zoneszone_idorigincloud_regionsbatch">PUT /zones/{zone_id}/origin/cloud_regions/batch</a></div>
+<a href="../api/origin_post_quantum.html">OriginPostQuantum</a>
+<a href="../api/schedule.html">Schedule</a>
+<a href="../api/smart_shield.html">SmartShield</a>
+<a href="../api/smart_tiered_cache.html">SmartTieredCache</a>
+<a href="../api/smartshield_response_collection.html">SmartshieldResponseCollection</a>
+<a href="../api/smartshield_single_hc.html">SmartshieldSingleHc</a>
+<a href="../api/smartshield_single_hc_id.html">SmartshieldSingleHcId</a>
+<a href="../api/test.html">Test</a>
+<a href="../api/tiered_caching.html">TieredCaching</a>
+<a href="../api/url_normalization.html">UrlNormalization</a>
+<a href="../api/zone_cache_setting.html">ZoneCacheSetting</a></details>
+<details><summary>Guides</summary><a href="../guides/authentication.html">Authentication</a>
+<a href="../guides/first-call.html">Make your first API call</a>
+<a href="../guides/errors.html">Handle errors</a>
+<a href="../guides/concepts.html">Entities, SDKs, and tools</a></details>
+<details><summary>SDKs</summary><a href="../sdks/go.html">Golang</a>
+<a href="../sdks/lua.html">Lua</a>
+<a href="../sdks/php.html">PHP</a>
+<a href="../sdks/py.html">Python</a>
+<a href="../sdks/rb.html">Ruby</a>
+<a href="../sdks/ts.html">TypeScript</a></details>
+<details><summary>Tools</summary><a href="../tools/go-cli.html">Go CLI</a>
+<a href="../tools/go-mcp.html">Go MCP server</a></details>
+<details><summary>Features</summary><a href="../features/test.html">Test transport</a></details></nav><main id="content"><div class="page-context"><span class="section-dot" aria-hidden="true"></span>API</div><h1 id="origincloudregion">OriginCloudRegion</h1>
+<h2 id="operations">Operations</h2>
+<p>Every route this entity exposes. Each route links to its own reference on this page.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Route</th>
+<th>SDK operation</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>POST</code></td>
+<td><a href="#post-zoneszone_idcacheorigin_cloud_regions"><code>/zones/{zone_id}/cache/origin_cloud_regions</code></a></td>
+<td><code>create</code></td>
+<td>Create origin cloud region mapping response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idorigincloud_regions"><code>/zones/{zone_id}/origin/cloud_regions</code></a></td>
+<td><code>list</code></td>
+<td>List origin cloud region mappings response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idcacheorigin_cloud_regions"><code>/zones/{zone_id}/cache/origin_cloud_regions</code></a></td>
+<td><code>list</code></td>
+<td>List origin cloud region mappings response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idcacheorigin_cloud_regionssupported_regions"><code>/zones/{zone_id}/cache/origin_cloud_regions/supported_regions</code></a></td>
+<td><code>list</code></td>
+<td>List supported cloud vendors and regions response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idorigincloud_regionssupported_regions"><code>/zones/{zone_id}/origin/cloud_regions/supported_regions</code></a></td>
+<td><code>list</code></td>
+<td>List supported cloud vendors and regions response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idcacheorigin_cloud_regionsorigin_ip"><code>/zones/{zone_id}/cache/origin_cloud_regions/{origin_ip}</code></a></td>
+<td><code>load</code></td>
+<td>Get origin cloud region mapping response</td>
+</tr>
+<tr>
+<td><code>GET</code></td>
+<td><a href="#get-zoneszone_idorigincloud_regionsorigin_ip"><code>/zones/{zone_id}/origin/cloud_regions/{origin_ip}</code></a></td>
+<td><code>load</code></td>
+<td>Get origin cloud region mapping response</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><a href="#patch-zoneszone_idcacheorigin_cloud_regions"><code>/zones/{zone_id}/cache/origin_cloud_regions</code></a></td>
+<td><code>patch</code></td>
+<td>Create or update origin cloud region mapping response</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td><a href="#patch-zoneszone_idcacheorigin_cloud_regionsbatch"><code>/zones/{zone_id}/cache/origin_cloud_regions/batch</code></a></td>
+<td><code>patch</code></td>
+<td>Batch create or update origin cloud region mappings successful</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><a href="#delete-zoneszone_idcacheorigin_cloud_regionsorigin_ip"><code>/zones/{zone_id}/cache/origin_cloud_regions/{origin_ip}</code></a></td>
+<td><code>remove</code></td>
+<td>Delete origin cloud region mapping response</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><a href="#delete-zoneszone_idorigincloud_regionsorigin_ip"><code>/zones/{zone_id}/origin/cloud_regions/{origin_ip}</code></a></td>
+<td><code>remove</code></td>
+<td>Delete origin cloud region mapping response</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><a href="#delete-zoneszone_idcacheorigin_cloud_regionsbatch"><code>/zones/{zone_id}/cache/origin_cloud_regions/batch</code></a></td>
+<td><code>remove</code></td>
+<td>Batch delete origin cloud region mappings successful</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><a href="#delete-zoneszone_idorigincloud_regionsbatch"><code>/zones/{zone_id}/origin/cloud_regions/batch</code></a></td>
+<td><code>remove</code></td>
+<td>Batch delete origin cloud region mappings successful</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td><a href="#put-zoneszone_idorigincloud_regionsorigin_ip"><code>/zones/{zone_id}/origin/cloud_regions/{origin_ip}</code></a></td>
+<td><code>update</code></td>
+<td>Create or replace origin cloud region mapping response</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td><a href="#put-zoneszone_idorigincloud_regionsbatch"><code>/zones/{zone_id}/origin/cloud_regions/batch</code></a></td>
+<td><code>update</code></td>
+<td>Batch create or replace origin cloud region mappings successful</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<p>One example per SDK, generated from the API model. The argument names are the parameters and fields of this entity, and the values are placeholders. The examples are not compiled or executed.</p>
+<h3 id="golang">Golang</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/go.html#set-up-the-client">Golang setup</a>, then call the operations:</p>
+<pre><code class="language-go">origin_cloud_regions, err := client.OriginCloudRegion(nil).List(map[string]any{&quot;zone_id&quot;: &quot;example&quot;}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(origin_cloud_regions)
+origin_cloud_region, err := client.OriginCloudRegion(nil).Load(map[string]any{&quot;id&quot;: &quot;example_id&quot;, &quot;zone_id&quot;: &quot;example&quot;}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(origin_cloud_region)
+created, err := client.OriginCloudRegion(nil).Create(map[string]any{&quot;zone_id&quot;: &quot;example&quot;, &quot;errors&quot;: []any{}, &quot;ip&quot;: &quot;example&quot;, &quot;messages&quot;: []any{}, &quot;origin_ip&quot;: &quot;example&quot;, &quot;region&quot;: &quot;example&quot;, &quot;result&quot;: map[string]any{}, &quot;result_info&quot;: map[string]any{}, &quot;success&quot;: true, &quot;vendor&quot;: &quot;example&quot;}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(created)
+updated, err := client.OriginCloudRegion(nil).Update(map[string]any{&quot;id&quot;: &quot;example_id&quot;, &quot;zone_id&quot;: &quot;example&quot;, &quot;errors&quot;: []any{}}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(updated)
+removed, err := client.OriginCloudRegion(nil).Remove(map[string]any{&quot;zone_id&quot;: &quot;example&quot;}, nil)
+if err != nil {
+    panic(err)
+}
+fmt.Println(removed)
+</code></pre>
+<h3 id="lua">Lua</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/lua.html#set-up-the-client">Lua setup</a>, then call the operations:</p>
+<pre><code class="language-lua">local origin_cloud_regions, err = client:OriginCloudRegion():list({ zone_id = &quot;example&quot; })
+local origin_cloud_region, err = client:OriginCloudRegion():load({ id = &quot;example_id&quot;, zone_id = &quot;example&quot; })
+local created, err = client:OriginCloudRegion():create({ zone_id = &quot;example&quot;, errors = {}, ip = &quot;example&quot;, messages = {}, origin_ip = &quot;example&quot;, region = &quot;example&quot;, result = {}, result_info = {}, success = true, vendor = &quot;example&quot; })
+local updated, err = client:OriginCloudRegion():update({ id = &quot;example_id&quot;, zone_id = &quot;example&quot;, errors = {} })
+local removed, err = client:OriginCloudRegion():remove({ zone_id = &quot;example&quot; })
+</code></pre>
+<h3 id="php">PHP</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/php.html#set-up-the-client">PHP setup</a>, then call the operations:</p>
+<pre><code class="language-php">$origin_cloud_regions = $client-&gt;OriginCloudRegion()-&gt;list([&quot;zone_id&quot; =&gt; &quot;example&quot;]);
+$origin_cloud_region = $client-&gt;OriginCloudRegion()-&gt;load([&quot;id&quot; =&gt; &quot;example_id&quot;, &quot;zone_id&quot; =&gt; &quot;example&quot;]);
+$created = $client-&gt;OriginCloudRegion()-&gt;create([&quot;zone_id&quot; =&gt; &quot;example&quot;, &quot;errors&quot; =&gt; [], &quot;ip&quot; =&gt; &quot;example&quot;, &quot;messages&quot; =&gt; [], &quot;origin_ip&quot; =&gt; &quot;example&quot;, &quot;region&quot; =&gt; &quot;example&quot;, &quot;result&quot; =&gt; [], &quot;result_info&quot; =&gt; [], &quot;success&quot; =&gt; true, &quot;vendor&quot; =&gt; &quot;example&quot;]);
+$updated = $client-&gt;OriginCloudRegion()-&gt;update([&quot;id&quot; =&gt; &quot;example_id&quot;, &quot;zone_id&quot; =&gt; &quot;example&quot;, &quot;errors&quot; =&gt; []]);
+$client-&gt;OriginCloudRegion()-&gt;remove([&quot;zone_id&quot; =&gt; &quot;example&quot;]);
+</code></pre>
+<h3 id="python">Python</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/py.html#set-up-the-client">Python setup</a>, then call the operations:</p>
+<pre><code class="language-py">origin_cloud_regions = client.OriginCloudRegion().list({&quot;zone_id&quot;: &quot;example&quot;})
+origin_cloud_region = client.OriginCloudRegion().load({&quot;id&quot;: &quot;example_id&quot;, &quot;zone_id&quot;: &quot;example&quot;})
+created = client.OriginCloudRegion().create({ &quot;zone_id&quot;: &quot;example&quot;, &quot;errors&quot;: [], &quot;ip&quot;: &quot;example&quot;, &quot;messages&quot;: [], &quot;origin_ip&quot;: &quot;example&quot;, &quot;region&quot;: &quot;example&quot;, &quot;result&quot;: {}, &quot;result_info&quot;: {}, &quot;success&quot;: True, &quot;vendor&quot;: &quot;example&quot; })
+updated = client.OriginCloudRegion().update({&quot;id&quot;: &quot;example_id&quot;, &quot;zone_id&quot;: &quot;example&quot;, &quot;errors&quot;: []})
+client.OriginCloudRegion().remove({&quot;zone_id&quot;: &quot;example&quot;})
+</code></pre>
+<h3 id="ruby">Ruby</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/rb.html#set-up-the-client">Ruby setup</a>, then call the operations:</p>
+<pre><code class="language-rb">origin_cloud_regions = client.OriginCloudRegion.list({ &quot;zone_id&quot; =&gt; &quot;example&quot; })
+origin_cloud_region = client.OriginCloudRegion.load({ &quot;id&quot; =&gt; &quot;example_id&quot;, &quot;zone_id&quot; =&gt; &quot;example&quot; })
+created = client.OriginCloudRegion.create({ &quot;zone_id&quot; =&gt; &quot;example&quot;, &quot;errors&quot; =&gt; [], &quot;ip&quot; =&gt; &quot;example&quot;, &quot;messages&quot; =&gt; [], &quot;origin_ip&quot; =&gt; &quot;example&quot;, &quot;region&quot; =&gt; &quot;example&quot;, &quot;result&quot; =&gt; {}, &quot;result_info&quot; =&gt; {}, &quot;success&quot; =&gt; true, &quot;vendor&quot; =&gt; &quot;example&quot; })
+updated = client.OriginCloudRegion.update({ &quot;id&quot; =&gt; &quot;example_id&quot;, &quot;zone_id&quot; =&gt; &quot;example&quot;, &quot;errors&quot; =&gt; [] })
+client.OriginCloudRegion.remove({ &quot;zone_id&quot; =&gt; &quot;example&quot; })
+</code></pre>
+<h3 id="typescript">TypeScript</h3>
+<p>Construct <code>client</code> as shown in the <a href="../sdks/ts.html#set-up-the-client">TypeScript setup</a>, then call the operations:</p>
+<pre><code class="language-ts">const origin_cloud_regions = await client.OriginCloudRegion().list({ zone_id: &quot;example&quot; })
+const origin_cloud_region = await client.OriginCloudRegion().load({ id: &quot;example_id&quot;, zone_id: &quot;example&quot; })
+const created = await client.OriginCloudRegion().create({ zone_id: &quot;example&quot;, errors: [], ip: &quot;example&quot;, messages: [], origin_ip: &quot;example&quot;, region: &quot;example&quot;, result: {}, result_info: {}, success: true, vendor: &quot;example&quot; })
+const updated = await client.OriginCloudRegion().update({ id: &quot;example_id&quot;, zone_id: &quot;example&quot;, errors: [] })
+await client.OriginCloudRegion().remove({ zone_id: &quot;example&quot; })
+</code></pre>
+<h2 id="fields">Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array</code></td>
+<td>Yes</td>
+<td>Errors</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>Id</td>
+</tr>
+<tr>
+<td><code>ip</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Origin IP address (IPv4 or IPv6).</td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array</code></td>
+<td>Yes</td>
+<td>Messages</td>
+</tr>
+<tr>
+<td><code>origin_ip</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Origin IP address (IPv4 or IPv6).</td>
+</tr>
+<tr>
+<td><code>region</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Cloud vendor region identifier.</td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td>Response result for a single origin cloud region mapping.</td>
+</tr>
+<tr>
+<td><code>result_info</code></td>
+<td><code>object</code></td>
+<td>Yes</td>
+<td>Pagination metadata for list responses.</td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>boolean</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+<tr>
+<td><code>vendor</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Cloud vendor hosting the origin.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="create">create</h2>
+<h3 id="post-zoneszone_idcacheorigin_cloud_regions" class="operation" data-method="post"><code>POST</code> /zones/{zone_id}/cache/origin_cloud_regions</h3>
+<p>Operation ID: <code>origin-cloud-regions-create</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ip</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Origin IP address (IPv4 or IPv6). Normalized to canonical form before storage (RFC 5952 for IPv6).</td>
+</tr>
+<tr>
+<td><code>region</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Cloud vendor region identifier. Must be a valid region for the specified vendor as returned by the <code>supported_regions</code> endpoint.</td>
+</tr>
+<tr>
+<td><code>vendor</code></td>
+<td><code>enum: aws, azure, gcp, oci</code></td>
+<td>Yes</td>
+<td>Cloud vendor hosting the origin. Must be one of the supported vendors.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses">Responses</h4>
+<h5 id="200-create-origin-cloud-region-mapping-response" class="status" data-status="2xx">200: Create origin cloud region mapping response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-create-origin-cloud-region-mapping-failure">4XX: Create origin cloud region mapping failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="list">list</h2>
+<h3 id="get-zoneszone_idorigincloud_regions" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/origin/cloud_regions</h3>
+<p>Operation ID: <code>origin-cloud-regions-v2-list</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-1">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |
+| <code>page</code> | <code>query</code> | <code>integer</code> | No | Page number of paginated results. |
+| <code>per_page</code> | <code>query</code> | <code>integer</code> | No | Number of items per page. |</p>
+<h4 id="responses-1">Responses</h4>
+<h5 id="200-list-origin-cloud-region-mappings-response" class="status" data-status="2xx">200: List origin cloud region mappings response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-list-origin-cloud-region-mappings-failure">4XX: List origin cloud region mappings failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-zoneszone_idcacheorigin_cloud_regions" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/cache/origin_cloud_regions</h3>
+<p>Operation ID: <code>origin-cloud-regions-list</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-2">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses-2">Responses</h4>
+<h5 id="200-list-origin-cloud-region-mappings-response-1" class="status" data-status="2xx">200: List origin cloud region mappings response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-list-origin-cloud-region-mappings-failure-1">4XX: List origin cloud region mappings failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-zoneszone_idcacheorigin_cloud_regionssupported_regions" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/cache/origin_cloud_regions/supported_regions</h3>
+<p>Operation ID: <code>origin-cloud-regions-supported-regions</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-3">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses-3">Responses</h4>
+<h5 id="200-list-supported-cloud-vendors-and-regions-response" class="status" data-status="2xx">200: List supported cloud vendors and regions response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-list-supported-cloud-vendors-and-regions-failure">4XX: List supported cloud vendors and regions failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-zoneszone_idorigincloud_regionssupported_regions" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/origin/cloud_regions/supported_regions</h3>
+<p>Operation ID: <code>origin-cloud-regions-v2-supported-regions</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-4">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="responses-4">Responses</h4>
+<h5 id="200-list-supported-cloud-vendors-and-regions-response-1" class="status" data-status="2xx">200: List supported cloud vendors and regions response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-list-supported-cloud-vendors-and-regions-failure-1">4XX: List supported cloud vendors and regions failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="load">load</h2>
+<h3 id="get-zoneszone_idcacheorigin_cloud_regionsorigin_ip" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/cache/origin_cloud_regions/{origin_ip}</h3>
+<p>Operation ID: <code>origin-cloud-regions-get</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-5">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |
+| <code>origin_ip</code> | <code>path</code> | <code>string</code> | Yes | Origin IP address to look up. IPv4 and IPv6 are supported. |</p>
+<h4 id="responses-5">Responses</h4>
+<h5 id="200-get-origin-cloud-region-mapping-response" class="status" data-status="2xx">200: Get origin cloud region mapping response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-get-origin-cloud-region-mapping-failure">4XX: Get origin cloud region mapping failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-zoneszone_idorigincloud_regionsorigin_ip" class="operation" data-method="get"><code>GET</code> /zones/{zone_id}/origin/cloud_regions/{origin_ip}</h3>
+<p>Operation ID: <code>origin-cloud-regions-v2-get</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-6">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |
+| <code>origin_ip</code> | <code>path</code> | <code>string</code> | Yes | Origin IP address to look up. IPv4 and IPv6 are supported. |</p>
+<h4 id="responses-6">Responses</h4>
+<h5 id="200-get-origin-cloud-region-mapping-response-1" class="status" data-status="2xx">200: Get origin cloud region mapping response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-get-origin-cloud-region-mapping-failure-1">4XX: Get origin cloud region mapping failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="patch">patch</h2>
+<h3 id="patch-zoneszone_idcacheorigin_cloud_regions" class="operation" data-method="patch"><code>PATCH</code> /zones/{zone_id}/cache/origin_cloud_regions</h3>
+<p>Operation ID: <code>origin-cloud-regions-upsert</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-7">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-1">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ip</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Origin IP address (IPv4 or IPv6). Normalized to canonical form before storage (RFC 5952 for IPv6).</td>
+</tr>
+<tr>
+<td><code>region</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Cloud vendor region identifier. Must be a valid region for the specified vendor as returned by the <code>supported_regions</code> endpoint.</td>
+</tr>
+<tr>
+<td><code>vendor</code></td>
+<td><code>enum: aws, azure, gcp, oci</code></td>
+<td>Yes</td>
+<td>Cloud vendor hosting the origin. Must be one of the supported vendors.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-7">Responses</h4>
+<h5 id="200-create-or-update-origin-cloud-region-mapping-response" class="status" data-status="2xx">200: Create or update origin cloud region mapping response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-create-or-update-origin-cloud-region-mapping-failure">4XX: Create or update origin cloud region mapping failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patch-zoneszone_idcacheorigin_cloud_regionsbatch" class="operation" data-method="patch"><code>PATCH</code> /zones/{zone_id}/cache/origin_cloud_regions/batch</h3>
+<p>Operation ID: <code>origin-cloud-regions-batch-upsert</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-8">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-2">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[].ip</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Origin IP address (IPv4 or IPv6). Normalized to canonical form before storage (RFC 5952 for IPv6).</td>
+</tr>
+<tr>
+<td><code>[].region</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Cloud vendor region identifier. Must be a valid region for the specified vendor as returned by the <code>supported_regions</code> endpoint.</td>
+</tr>
+<tr>
+<td><code>[].vendor</code></td>
+<td><code>enum: aws, azure, gcp, oci</code></td>
+<td>Yes</td>
+<td>Cloud vendor hosting the origin. Must be one of the supported vendors.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-8">Responses</h4>
+<h5 id="200-batch-create-or-update-origin-cloud-region-mappings-successful" class="status" data-status="2xx">200: Batch create or update origin cloud region mappings successful</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-batch-create-or-update-origin-cloud-region-mappings-failure">4XX: Batch create or update origin cloud region mappings failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="5xx-batch-create-or-update-origin-cloud-region-mappings-internal-error">5XX: Batch create or update origin cloud region mappings internal error</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="remove">remove</h2>
+<h3 id="delete-zoneszone_idcacheorigin_cloud_regionsorigin_ip" class="operation" data-method="delete"><code>DELETE</code> /zones/{zone_id}/cache/origin_cloud_regions/{origin_ip}</h3>
+<p>Operation ID: <code>origin-cloud-regions-delete</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-9">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |
+| <code>origin_ip</code> | <code>path</code> | <code>string</code> | Yes | Origin IP address whose mapping should be deleted. |</p>
+<h4 id="responses-9">Responses</h4>
+<h5 id="200-delete-origin-cloud-region-mapping-response" class="status" data-status="2xx">200: Delete origin cloud region mapping response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-delete-origin-cloud-region-mapping-failure">4XX: Delete origin cloud region mapping failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="delete-zoneszone_idorigincloud_regionsorigin_ip" class="operation" data-method="delete"><code>DELETE</code> /zones/{zone_id}/origin/cloud_regions/{origin_ip}</h3>
+<p>Operation ID: <code>origin-cloud-regions-v2-delete</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-10">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |
+| <code>origin_ip</code> | <code>path</code> | <code>string</code> | Yes | Origin IP address whose mapping should be deleted. |</p>
+<h4 id="responses-10">Responses</h4>
+<h5 id="200-delete-origin-cloud-region-mapping-response-1" class="status" data-status="2xx">200: Delete origin cloud region mapping response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-delete-origin-cloud-region-mapping-failure-1">4XX: Delete origin cloud region mapping failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="delete-zoneszone_idcacheorigin_cloud_regionsbatch" class="operation" data-method="delete"><code>DELETE</code> /zones/{zone_id}/cache/origin_cloud_regions/batch</h3>
+<p>Operation ID: <code>origin-cloud-regions-batch-delete</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-11">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-3">Request body</h4>
+<p><code>application/json</code></p>
+<p>The request body is <code>array of string</code>.</p>
+<h4 id="responses-11">Responses</h4>
+<h5 id="200-batch-delete-origin-cloud-region-mappings-successful" class="status" data-status="2xx">200: Batch delete origin cloud region mappings successful</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-batch-delete-origin-cloud-region-mappings-failure">4XX: Batch delete origin cloud region mappings failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="5xx-batch-delete-origin-cloud-region-mappings-internal-error">5XX: Batch delete origin cloud region mappings internal error</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="delete-zoneszone_idorigincloud_regionsbatch" class="operation" data-method="delete"><code>DELETE</code> /zones/{zone_id}/origin/cloud_regions/batch</h3>
+<p>Operation ID: <code>origin-cloud-regions-v2-batch-delete</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-12">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-4">Request body</h4>
+<p><code>application/json</code></p>
+<p>The request body is <code>array of string</code>.</p>
+<h4 id="responses-12">Responses</h4>
+<h5 id="200-batch-delete-origin-cloud-region-mappings-successful-1" class="status" data-status="2xx">200: Batch delete origin cloud region mappings successful</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-batch-delete-origin-cloud-region-mappings-failure-1">4XX: Batch delete origin cloud region mappings failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="update">update</h2>
+<h3 id="put-zoneszone_idorigincloud_regionsorigin_ip" class="operation" data-method="put"><code>PUT</code> /zones/{zone_id}/origin/cloud_regions/{origin_ip}</h3>
+<p>Operation ID: <code>origin-cloud-regions-v2-upsert</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-13">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |
+| <code>origin_ip</code> | <code>path</code> | <code>string</code> | Yes | Origin IP address to create or replace. |</p>
+<h4 id="request-body-5">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>origin_ip</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Origin IP address (IPv4 or IPv6). For the single PUT endpoint (<code>PUT /origin/</code>cloud_regions<code>/&amp;#123;</code>origin_ip<code>&amp;#125;</code>), this field must match the path parameter or the request will be rejected with a 400 error. For the batch PUT endpoint, this field identifies which mapping to upsert.</td>
+</tr>
+<tr>
+<td><code>region</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Cloud vendor region identifier. Must be a valid region for the specified vendor as returned by the <code>supported_regions</code> endpoint.</td>
+</tr>
+<tr>
+<td><code>vendor</code></td>
+<td><code>enum: aws, azure, gcp, oci</code></td>
+<td>Yes</td>
+<td>Cloud vendor hosting the origin. Must be one of the supported vendors.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-13">Responses</h4>
+<h5 id="200-create-or-replace-origin-cloud-region-mapping-response" class="status" data-status="2xx">200: Create or replace origin cloud region mapping response</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-create-or-replace-origin-cloud-region-mapping-failure">4XX: Create or replace origin cloud region mapping failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="put-zoneszone_idorigincloud_regionsbatch" class="operation" data-method="put"><code>PUT</code> /zones/{zone_id}/origin/cloud_regions/batch</h3>
+<p>Operation ID: <code>origin-cloud-regions-v2-batch-upsert</code>.</p>
+<p>Authentication: bearer token (<code>api_token</code>) or API key in the header (<code>api_email</code>) or API key in the header (<code>api_key</code>).</p>
+<h4 id="parameters-14">Parameters</h4>
+<p>| Parameter | In | Type | Required | Description |
+| --- | --- | --- | --- |
+| <code>zone_id</code> | <code>path</code> | <code>string</code> | Yes |  |</p>
+<h4 id="request-body-6">Request body</h4>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[].origin_ip</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Origin IP address (IPv4 or IPv6). For the single PUT endpoint (<code>PUT /origin/</code>cloud_regions<code>/&amp;#123;</code>origin_ip<code>&amp;#125;</code>), this field must match the path parameter or the request will be rejected with a 400 error. For the batch PUT endpoint, this field identifies which mapping to upsert.</td>
+</tr>
+<tr>
+<td><code>[].region</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Cloud vendor region identifier. Must be a valid region for the specified vendor as returned by the <code>supported_regions</code> endpoint.</td>
+</tr>
+<tr>
+<td><code>[].vendor</code></td>
+<td><code>enum: aws, azure, gcp, oci</code></td>
+<td>Yes</td>
+<td>Cloud vendor hosting the origin. Must be one of the supported vendors.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="responses-14">Responses</h4>
+<h5 id="200-batch-create-or-replace-origin-cloud-region-mappings-successful" class="status" data-status="2xx">200: Batch create or replace origin cloud region mappings successful</h5>
+<p><code>application/json</code></p>
+<p>The response is <code>object and object</code>.</p>
+<h5 id="4xx-batch-create-or-replace-origin-cloud-region-mappings-failure">4XX: Batch create or replace origin cloud region mappings failure</h5>
+<p><code>application/json</code></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>errors</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>messages</code></td>
+<td><code>array of object</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>result</code></td>
+<td><code>enum: null</code></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>success</code></td>
+<td><code>enum: false</code></td>
+<td>Yes</td>
+<td>Whether the API call was successful.</td>
+</tr>
+</tbody>
+</table>
+</main></div>
+<script src="../assets/search.js" defer></script></body></html>

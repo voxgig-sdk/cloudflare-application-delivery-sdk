@@ -1,0 +1,26 @@
+# BasicCustomPagesCustomAssetResultListFlow
+
+main: kit: flow: BasicCustomPagesCustomAssetResultListFlow:
+{
+  entity: "custom_pages_custom_asset_result_list",
+  kind: "basic",
+  name: "BasicCustomPagesCustomAssetResultListFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "custom_pages_custom_asset_result_list_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicCustomPagesCustomAssetResultListFlow"
+}

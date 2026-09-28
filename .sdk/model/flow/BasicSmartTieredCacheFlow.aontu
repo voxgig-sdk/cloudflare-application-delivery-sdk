@@ -1,0 +1,76 @@
+# BasicSmartTieredCacheFlow
+
+main: kit: flow: BasicSmartTieredCacheFlow:
+{
+  entity: "smart_tiered_cache",
+  kind: "basic",
+  name: "BasicSmartTieredCacheFlow",
+  step: [
+    {
+      i: {
+        ref: "smart_tiered_cache_ref01"
+      }
+
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "smart_tiered_cache_ref01",
+        srcdatavar: "smart_tiered_cache_ref01_data",
+        suffix: "_up0",
+        textfield: "value"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-smart_tiered_cache_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "smart_tiered_cache_ref01",
+        srcdatavar: "smart_tiered_cache_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "smart_tiered_cache01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-smart_tiered_cache_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "smart_tiered_cache_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "smart_tiered_cache01"
+      }
+
+      o: "remove"
+    }
+  ],
+  "key$": "BasicSmartTieredCacheFlow"
+}

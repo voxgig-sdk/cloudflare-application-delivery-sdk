@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "custom_assets_for_a_zone": {
+      "CUSTOM_ASSETS_FOR_A_ZONE00": {
+        "asset_name": "ASSET_NAME01",
+        "zone_id": "ZONE01",
+        "id": "CUSTOM_ASSETS_FOR_A_ZONE00"
+      },
+      "CUSTOM_ASSETS_FOR_A_ZONE01": {
+        "asset_name": "ASSET_NAME01",
+        "zone_id": "ZONE01",
+        "id": "CUSTOM_ASSETS_FOR_A_ZONE01"
+      },
+      "CUSTOM_ASSETS_FOR_A_ZONE02": {
+        "asset_name": "ASSET_NAME01",
+        "zone_id": "ZONE01",
+        "id": "CUSTOM_ASSETS_FOR_A_ZONE02"
+      }
+    }
+  },
+  "new": {
+    "custom_assets_for_a_zone": {
+      "custom_assets_for_a_zone_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /zones/{zone_id}/custom_pages/assets/{asset_name}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

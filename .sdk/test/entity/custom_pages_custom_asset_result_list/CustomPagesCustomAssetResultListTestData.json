@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "custom_pages_custom_asset_result_list": {
+      "CUSTOM_PAGES_CUSTOM_ASSET_RESULT_LIST00": {
+        "result": [],
+        "account_id": "ACCOUNT01",
+        "zone_id": "ZONE01"
+      },
+      "CUSTOM_PAGES_CUSTOM_ASSET_RESULT_LIST01": {
+        "result": [],
+        "account_id": "ACCOUNT01",
+        "zone_id": "ZONE01"
+      },
+      "CUSTOM_PAGES_CUSTOM_ASSET_RESULT_LIST02": {
+        "result": [],
+        "account_id": "ACCOUNT01",
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "custom_pages_custom_asset_result_list": {
+      "custom_pages_custom_asset_result_list_ref01": {
+        "result": []
+      }
+    }
+  },
+  "requests": {
+    "GET /accounts/{account_id}/custom_pages/assets": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/custom_pages/assets": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

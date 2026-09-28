@@ -1,0 +1,51 @@
+# BasicOriginPostQuantumFlow
+
+main: kit: flow: BasicOriginPostQuantumFlow:
+{
+  entity: "origin_post_quantum",
+  kind: "basic",
+  name: "BasicOriginPostQuantumFlow",
+  step: [
+    {
+      i: {
+        ref: "origin_post_quantum_ref01",
+        srcdatavar: "origin_post_quantum_ref01_data",
+        suffix: "_up0",
+        textfield: "value"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-origin_post_quantum_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "origin_post_quantum_ref01",
+        srcdatavar: "origin_post_quantum_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "origin_post_quantum01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-origin_post_quantum_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicOriginPostQuantumFlow"
+}

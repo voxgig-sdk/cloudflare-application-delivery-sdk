@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "test": {
+      "TEST00": {
+        "url": "URL01",
+        "zone_id": "ZONE01",
+        "id": "TEST00"
+      },
+      "TEST01": {
+        "url": "URL01",
+        "zone_id": "ZONE01",
+        "id": "TEST01"
+      },
+      "TEST02": {
+        "url": "URL01",
+        "zone_id": "ZONE01",
+        "id": "TEST02"
+      }
+    }
+  },
+  "new": {
+    "test": {
+      "test_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /zones/{zone_id}/speed_api/pages/{url}/tests": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

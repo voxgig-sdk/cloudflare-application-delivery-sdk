@@ -1,0 +1,44 @@
+# BasicManagedTransformFlow
+
+main: kit: flow: BasicManagedTransformFlow:
+{
+  entity: "managed_transform",
+  kind: "basic",
+  name: "BasicManagedTransformFlow",
+  step: [
+    {
+      m: {
+        zone_id: "zone01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "managed_transform_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "managed_transform_ref01",
+        srcdatavar: "managed_transform_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-managed_transform_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicManagedTransformFlow"
+}

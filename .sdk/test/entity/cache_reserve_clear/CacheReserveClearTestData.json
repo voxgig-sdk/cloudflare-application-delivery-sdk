@@ -1,0 +1,52 @@
+{
+  "existing": {
+    "cache_reserve_clear": {
+      "CACHE_RESERVE_CLEAR00": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "zone_id": "ZONE01",
+        "id": "CACHE_RESERVE_CLEAR00"
+      },
+      "CACHE_RESERVE_CLEAR01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "zone_id": "ZONE01",
+        "id": "CACHE_RESERVE_CLEAR01"
+      },
+      "CACHE_RESERVE_CLEAR02": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "zone_id": "ZONE01",
+        "id": "CACHE_RESERVE_CLEAR02"
+      }
+    }
+  },
+  "new": {
+    "cache_reserve_clear": {
+      "cache_reserve_clear_ref01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false
+      }
+    }
+  },
+  "requests": {
+    "POST /zones/{zone_id}/smart_shield/cache_reserve_clear": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /zones/{zone_id}/smart_shield/cache_reserve_clear": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

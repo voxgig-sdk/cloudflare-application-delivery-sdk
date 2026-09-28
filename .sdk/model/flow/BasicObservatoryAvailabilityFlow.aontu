@@ -1,0 +1,32 @@
+# BasicObservatoryAvailabilityFlow
+
+main: kit: flow: BasicObservatoryAvailabilityFlow:
+{
+  entity: "observatory_availability",
+  kind: "basic",
+  name: "BasicObservatoryAvailabilityFlow",
+  step: [
+    {
+      i: {
+        ref: "observatory_availability_ref01",
+        srcdatavar: "observatory_availability_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "observatory_availability01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-observatory_availability_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicObservatoryAvailabilityFlow"
+}

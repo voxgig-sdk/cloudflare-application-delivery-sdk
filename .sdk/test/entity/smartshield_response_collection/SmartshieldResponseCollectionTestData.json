@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "smartshield_response_collection": {
+      "SMARTSHIELD_RESPONSE_COLLECTION00": {
+        "result": [],
+        "zone_id": "ZONE01"
+      },
+      "SMARTSHIELD_RESPONSE_COLLECTION01": {
+        "result": [],
+        "zone_id": "ZONE01"
+      },
+      "SMARTSHIELD_RESPONSE_COLLECTION02": {
+        "result": [],
+        "zone_id": "ZONE01"
+      }
+    }
+  },
+  "new": {
+    "smartshield_response_collection": {
+      "smartshield_response_collection_ref01": {
+        "result": []
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/smart_shield/healthchecks": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

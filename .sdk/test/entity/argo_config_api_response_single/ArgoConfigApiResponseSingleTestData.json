@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "argo_config_api_response_single": {
+      "ARGO_CONFIG_API_RESPONSE_SINGLE00": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": "s36",
+        "zone_id": "ZONE01",
+        "id": "ARGO_CONFIG_API_RESPONSE_SINGLE00"
+      },
+      "ARGO_CONFIG_API_RESPONSE_SINGLE01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": "s68",
+        "zone_id": "ZONE01",
+        "id": "ARGO_CONFIG_API_RESPONSE_SINGLE01"
+      },
+      "ARGO_CONFIG_API_RESPONSE_SINGLE02": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": "s9a",
+        "zone_id": "ZONE01",
+        "id": "ARGO_CONFIG_API_RESPONSE_SINGLE02"
+      }
+    }
+  },
+  "new": {
+    "argo_config_api_response_single": {
+      "argo_config_api_response_single_ref01": {
+        "errors": [],
+        "messages": [],
+        "result": {},
+        "success": false,
+        "value": "scc"
+      }
+    }
+  },
+  "requests": {
+    "GET /zones/{zone_id}/argo/smart_routing": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /zones/{zone_id}/argo/smart_routing": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}
